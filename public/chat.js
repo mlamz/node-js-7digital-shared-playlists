@@ -18,8 +18,9 @@ $(document).ready(function(){
 	$("#track-search").submit(function(e){
 		e.preventDefault();
 
-		$.post("/trackSearch", { query : "u2" },
+		$.post("/trackSearch", { query : $("#track-search-query").val() },
    			function(data) {
+   				console.log("search results: ");
      			console.log(data);
    			});
 	})

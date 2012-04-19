@@ -8,6 +8,7 @@ var app = express.createServer();
 
 var everyone = nowjs.initialize(app);
 app.configure(function(){
+    app.use(express.bodyParser());
     app.use(express.methodOverride());
     app.use(app.router);
     app.use(express.static(__dirname + '/public'));
@@ -20,13 +21,14 @@ app.configure('development', function(){
 });
 
 
+
+
 app.get('/', function(request, response){
     console.log("home");
     homeController.index(request, response);
 });
 
 app.post('/trackSearch', function(request, response){
-    console.log("track search");
     trackSearchController.index(request, response);
 });
 
