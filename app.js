@@ -1,6 +1,7 @@
 var express = require('express'),
     homeController = require('./controllers/homeController')
-    nowjs = require('now');
+    nowjs = require('now'),
+    port = 3000;
 
 var app = express.createServer();
 
@@ -19,12 +20,16 @@ app.configure('development', function(){
 
 
 app.get('/', function(request, response){
+    console.log("loading home");
     homeController.index(request, response);
 });
 
 
 everyone.now.distributeMessage = function(str){
-  everyone.now.receiveMessage(str,this.now.name);
+    console.log("distributing message");
+    everyone.now.receiveMessage(this.now.name,str);
 }
 
-app.listen(process.env.PORT);
+app.listen(port);
+
+console.log("app listening on port: "+port);
