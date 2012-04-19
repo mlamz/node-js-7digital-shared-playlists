@@ -1,0 +1,34 @@
+/*
+Baseline - a designer framework
+Copyright (C) 2009 Stephane Curzi, ProjetUrbain.com
+Creative Commons Attribution-Share Alike 3.0 License
+version 0.5.2
+*/
+
+/******************** Base ********************/
+body											{ line-height: 1.5; background: white; color: #333; }
+h1, h2, h3, h4, h5, h6							{ line-height: 1.2; }
+b, strong, caption, th, thead, dt, legend		{ font-weight: bold; }
+cite, dfn, em, i								{ font-style: italic; }
+h1, h2, h3, h4, h5, h6							{ word-spacing: -0.125em; }
+p												{ word-spacing: 0.125em; hyphenate: auto; hyphenate-lines: 3; }
+pre												{ white-space: pre; }
+mark											{ background: rgba(255, 255, 0, 0.4); padding: 0 .25em; }
+small, sup, sub									{ font-size: 80%; }
+big												{ font-size: 125%; line-height: 80%; }
+abbr, acronym									{ font-size: 85%; text-transform: uppercase; letter-spacing: .1em; }
+abbr[title], acronym[title], dfn[title]			{ border-bottom: 1px dotted black; cursor: help; }
+sup, sub										{ line-height: 0; }
+sup												{ vertical-align: super; }
+sub												{ vertical-align: sub; }
+blockquote										{ padding: 1.5em; }
+hr												{ border: none; background: #ddd; width: 100%; }
+ul, ol											{ margin-left: 1.5em; }
+ul												{ list-style: disc outside; }
+ol												{ list-style: decimal outside; }
+select, button									{ cursor: pointer; }
+table											{ font: inherit; width: 100%; }
+
+/* html 5 */
+article, aside, header, hgroup,
+nav, figure, section, footer					{ display: block; }

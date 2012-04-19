@@ -1,0 +1,169 @@
+﻿/*
+ * No Script CSS for 7digital.com
+ *
+ * Applied when the user has javascript disabled
+ * Overrides styles, is bottom of cascade
+ * NOTE: Uses inline hacks for IE
+ *
+ *  color: #999;  // shows in all browsers
+ *  *color: #999; // notice the * before the property - shows in IE7 and below
+ *  _color: #999; // notice the _ before the property - shows in IE6 and below
+ *
+ * (c) 7digital.com
+ */
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL
+/* ------------------------------------------------------------------------- */
+img.loading {
+background: none;}
+
+.collapsible {
+display: block !important;}
+
+.radio-label {
+color: #333;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > FLYOUT
+/* ------------------------------------------------------------------------- */
+.flyout {
+background-image: none;}
+
+.flyout-contents {
+border: none;}
+
+.flyout li:hover {
+background-color: transparent;}
+
+.flyout-contents ul {
+padding: 0 9px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > PAGE HEADER > COUNTRY SELECT
+/* ------------------------------------------------------------------------- */
+#country-selector {
+border: none;
+background: none;
+margin: 18px 12px;}
+
+#country-selector strong {
+border: 1px dotted #555;}
+
+#country-selector li {
+border: none;}
+
+#country-selector li li {
+border-right: none;}
+
+#country-select .flyout-activator {
+padding: 0;
+background: none;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > FOOTER
+/* ------------------------------------------------------------------------- */
+#country-selector {
+clear: both;
+height: auto;
+*width: 95%;}
+
+#country-selector .flyout-contents {
+position: static;
+display: inline;}
+
+#country-selector li {
+height: 4.5em;
+float: left;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > CAROUSELS
+/* ------------------------------------------------------------------------- */
+.scrollable {
+height: auto;
+margin: 0 18px;}
+
+.carousel .pages {
+position: static;}
+
+.carousel .unit {
+margin: 0 4px;}
+
+.pager,
+.item-count {
+display: none;}
+
+.horizontal {
+padding-top: 18px;}
+
+.page {
+clear: both;}
+
+.carousel-control {
+display: none;}
+
+.vertical .pages {
+height: auto;}
+
+.vertical .scrollable,
+.horizontal .scrollable {
+margin: 0;
+overflow-y: scroll;}
+
+.horizontal .unit {
+margin: 0 9px;}
+
+.vertical .unit {
+padding-right: 0;}
+
+.vertical .page {
+*width: 92%;}
+
+.fullwidth-carousel .scrollable {
+overflow-y: auto;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > PLAYER
+/* ------------------------------------------------------------------------- */
+#player-container {
+display: none;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > FORMS
+/* ------------------------------------------------------------------------- */
+.pagesize-selector button {
+display: block;}
+
+/* ------------------------------------------------------------------------- */
+/* FEEDBACK
+/* ------------------------------------------------------------------------- */
+.has-error .validation-msg {
+top: -5px}
+
+/* ------------------------------------------------------------------------- */
+/* DOWNLOADS
+/* ------------------------------------------------------------------------- */
+.trackstoggle {
+display: none;}
+
+.download .tracklisting,
+.trackdownload select {
+display: block;}
+
+/* ------------------------------------------------------------------------- */
+/* CHECKOUT
+/* ------------------------------------------------------------------------- */
+#complete-checkout {
+display: block;}
+
+#dummy-checkout {
+display: none;}
+
+#add-card {
+display: block;}
+
+/* ------------------------------------------------------------------------- */
+/* ACCESS
+/* ------------------------------------------------------------------------- */
+#page.access .validation-msg {
+top: auto;}

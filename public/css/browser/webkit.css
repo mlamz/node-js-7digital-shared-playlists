@@ -1,0 +1,16 @@
+﻿/*
+ * Webkit workarounds for 7digital.com
+ * (c) 7digital.com
+ */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.buy-link .add {
+		padding: 6px 10px;
+	}
+
+	.singleline + .button-strip,
+	.singleline + button {
+		position: relative;
+		top: -3px;
+	}
+}

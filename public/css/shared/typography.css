@@ -1,0 +1,559 @@
+﻿/*
+ * Shared Typography for 7digital.com
+ * (c) 7digital.com
+ */
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > BASE ELEMENTS
+/* ------------------------------------------------------------------------- */
+body,
+.body-style {
+font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;}
+
+ul, ol, dl, dialog, 
+p, pre, address {
+font-size: 11px;
+top: 0;}
+
+del {
+text-decoration: line-through;}
+
+/* Tables */
+td {
+vertical-align: middle;} 
+
+thead th {
+white-space: nowrap;
+font-size: .9em;
+font-weight: normal;}
+
+thead th a,
+thead th span {
+white-space: nowrap;}
+
+tfoot td {
+text-align: center;}
+
+.sorter {
+text-decoration: none;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > BASE ELEMENTS > HEADINGS
+/* ------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6, .heading {
+position: relative;
+word-spacing: .05em;
+margin-bottom: 9px;
+letter-spacing: -.025em;}
+
+h1, h2, h3, h4, .heading {
+margin-top: 9px; 
+font-family: 'Century Old Style Std', 'Century Schoolbook', Georgia, serif;}
+
+h1 {
+padding-bottom: 9px;
+margin: 0 0 9px;}
+
+h2 {
+font-size: 1.7em;}
+
+h3,
+form h2 {
+line-height: 1.2;
+padding-bottom: 6px;
+font-size: 1.6em;}
+
+h4,
+form h3,
+.sidebar-heading {
+font-style: normal;
+font-weight: bold;
+font-size: 1.1em;
+letter-spacing: 0;
+margin: 0 0 .25em;}
+
+h4 {
+margin: 0 0 9px;}
+
+del {
+font-weight: normal;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > COMMON STYLES
+/* ------------------------------------------------------------------------- */
+.help {
+text-decoration: underline;}	
+
+.focus-text {
+line-height: 1.5;
+font-size: 125%;}
+
+.c {
+text-align: center;}
+
+.tr {
+text-align: right;}
+
+.small {
+font-size: 10px;}
+
+.lc {
+text-transform: lowercase;}
+
+.uc {
+text-transform: lowercase;
+font-variant: small-caps;}
+
+.delete {
+font-size: 14px;
+text-decoration: none;
+font-weight: bold;}
+
+.downloads-header,
+.success-header {
+text-indent: 42px;}
+
+.or {
+text-transform: lowercase;}
+
+.next-page {
+text-decoration: none;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > TABS
+/* ------------------------------------------------------------------------- */
+.tabs a {
+text-decoration: none;
+text-align: left;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > HEADER
+/* ------------------------------------------------------------------------- */
+#logo a {
+text-indent: -9999px;}
+
+#header {
+line-height: 19px;}
+
+#header li,
+#header  nav li a {
+line-height: 17px;}
+
+#header a,
+#user-tools a {
+text-decoration: none;}
+
+#country-select-header .flyout-activator {
+text-indent: -9999em;}
+
+#old-site {
+font-weight: bold;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > BASKET
+/* ------------------------------------------------------------------------- */
+.basket td,
+.basket th {
+line-height: 1.5;	
+font-size: 11px;}
+
+.basket tfoot td,
+.basket tfoot th {
+font-size: 1em;}
+
+.order-total {
+font-size: 1.2em;}
+
+.order-subtotal,
+.order-discounts,
+.order-subtotal th,
+.order-discounts th {
+font-weight: normal;}
+
+.basket .price-value {
+text-align: left;} 
+
+.summary-item-price {
+white-space: nowrap;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > HEADER > BASKET
+/* ------------------------------------------------------------------------- */
+#basket-link .summary-item a {
+text-decoration: underline;}
+
+#basket .order-total {
+font-size: .9em;}
+
+#basket table .loading {
+text-indent: -9999em;}
+
+#basket .button-strip a {
+font-size: 1.4em;
+text-align: right;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > FOOTER
+/* ------------------------------------------------------------------------- */
+#footer dt {
+font-weight: bold;}
+
+#newsletter-response {
+text-align: left;}
+
+#newsletter-response span {
+line-height: 1.2;}
+
+#newsletter-response.ready span {
+font-weight: normal;}
+
+#footer h2 {
+line-height: 1;
+font-size: 1.4em;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > PLAYER
+/* ------------------------------------------------------------------------- */
+/* Player */ 
+.player-logo {
+text-indent: -9999em;}
+
+/* Controls */
+#controls span,
+#player-pin {
+text-indent: -9999em;}
+
+/* Now-Playing */
+#now-playing {
+white-space: nowrap;}
+
+#now-playing-label {
+font-weight: bold;}
+
+#now-playing-text {
+white-space: nowrap;}
+
+/* Progress */
+.jp-remaining ,
+.jp-current-time {
+font-size: 10px;}
+
+/* Playlist */
+#playlist a {
+text-decoration: none;}
+
+.currently-playing a {
+font-weight: bold;}
+
+#playlist span {
+text-align: center;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > CAROUSELS
+/* ------------------------------------------------------------------------- */
+.unit div,
+.unit-title {
+text-align: center;}
+
+.title {
+word-wrap: break-word;
+font-weight: bold;}
+
+.packshot-link {
+text-align: center;}
+
+.carousel-control span {
+text-indent: -9999px;}
+
+.horizontal form {
+text-align: center;}
+
+/* Carousel Controls */
+.carousel-control span {
+font-size: 29px;
+line-height: 18px;
+font-family: georgia, serif;}
+
+/* Carousel Paging */
+.pager {
+line-height: 32px;
+text-align: right;}
+
+.pager a {
+line-height: 18px;
+text-indent: -9999px;
+font-size: 0;}
+
+/* Vertical Carousels */
+.vertical .unit-title,
+.vertical .price-unit {
+text-align: left;}
+
+/* View More */
+.view-more a {
+font-weight: bold;
+text-transform: lowercase;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > SLIDE CAROUSELS
+/* ------------------------------------------------------------------------- */
+.slides-navigation a {
+text-decoration: none;
+word-wrap: break-word;}
+
+.slide-content h2,
+.slide-content p,
+.slide-content a {
+line-height: 18px;}
+
+.slide-content h2 a {
+font-weight: normal;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > RELEASE UNIT
+/* ------------------------------------------------------------------------- */
+.add,
+.preview {
+text-decoration: none;
+text-indent: -9999px;}
+
+.add {
+text-transform: uppercase;
+text-decoration: none;}
+
+.price {
+font-size: 11px;
+font-weight: bold;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > FLYOUT
+/* ------------------------------------------------------------------------- */
+.flyout {
+line-height: 20px;}
+
+#footer .flyout strong {
+text-transform: lowercase;}
+
+.country-code {
+font-weight: bold;}
+
+/* ------------------------------------------------------------------------- */
+/* RELEASE PAGE
+/* ------------------------------------------------------------------------- */
+.release .by {
+font-style: italic;
+font-size: 75%;}
+
+.release-info h2 {
+font-size: 2.15em;}
+
+.release-version {
+font-size: 40%;
+letter-spacing: normal;
+vertical-align: bottom;}
+
+.release-head .price {
+font-size: 14px;}
+
+.buy-link .add {
+text-indent: 0;}
+
+.buy-link .discount {
+font-size: 11px;}
+
+.play-all {
+line-height: 17px;
+font-weight: bold;}
+
+.play-all span {
+line-height: 14px;	
+text-indent: 20px;
+text-transform: capitalize;
+white-space: nowrap;}
+
+.explicit {
+text-indent: -9999px;}
+
+.recordlabel {
+font-style: italic;}
+
+.releaseformat {
+font-weight: bold;}
+
+/* Quality Selector */
+.quality-selector {
+text-transform: lowercase;
+font-weight: normal;
+font-size: 90%;}
+
+/* Tracklisting */
+th.tracknumber,
+th.trackformat,
+td.trackformat,
+th.trackbuy,
+td.trackpreview,
+.trackrating {
+text-align: center;}
+
+tr.highlighted-track td {
+font-weight: bold;}
+
+td.trackbuy,
+.tracktime,
+tfoot .buy-link {
+text-align: right;}
+
+.trackname,
+.trackformat {
+text-align: left;} 
+
+.trackname {
+max-width: 266px;
+word-wrap: break-word;}
+
+.trackadditional,
+.tracknumber,
+.tracktime,
+.trackreleasedate,
+.tracktype {
+font-size: 11px;}
+
+.multidisc-buy {
+text-align: right;}
+
+.popularity-bar {
+text-indent: -9999px;}
+
+.trackbuy .small {
+line-height: 1;
+text-align: center;}
+
+.productlist .title,
+.tracklist .title {
+font-weight: normal;}
+
+/* Formats */
+.format {
+text-transform: uppercase;
+font-weight: bold;
+letter-spacing: 1px;
+line-height: 16px;
+text-align: center;}
+
+/* ------------------------------------------------------------------------- */
+/* CHECKOUT
+/* ------------------------------------------------------------------------- */
+.checkout-register td,
+.checkout-register th {
+text-align: right;}
+
+#order-summary .feedback {
+text-align: center;}
+
+#checkout-belt .radio-label {
+line-height: 23px;}
+
+#checkout-belt .small {
+text-align: center;
+text-transform: lowercase;}
+
+#add-card h3 {
+letter-spacing: 0;
+font-weight: normal;}
+
+/* ------------------------------------------------------------------------- */
+/* DOWNLOADS
+/* ------------------------------------------------------------------------- */
+.download-options span {
+text-transform: lowercase;}
+
+.downloads .title {
+font-size: 1.2em;}
+
+td.trackartist a {
+font-weight: bold;}
+
+.trackdownload form,
+.download-details li,
+.downloads th.trackdetails {
+text-align: center;}
+
+.trackform .trackname {
+font-size: 12px;}
+
+.downloads .downloadsize {
+text-align: left;}
+
+.download-details label {
+font-size: 11px;
+white-space: nowrap;}
+
+.downloads ol li {
+font-size: 1.1em;
+line-height: 2;}
+
+#download-manager-status {
+font-weight: bold;}
+
+#download-manager-status li {
+text-align: center;}
+
+#download-manager-status a {
+white-space: nowrap;}
+
+/* ------------------------------------------------------------------------- */
+/* DOWNLOAD OPTIONS MODAL
+/* ------------------------------------------------------------------------- */
+#download-choice .choice,
+#download-choice h2,
+#download-choice h3,
+#download-choice p,
+#install-complete p {
+text-align: center;}
+
+/* ------------------------------------------------------------------------- */
+/* ARTIST PAGE
+/* ------------------------------------------------------------------------- */
+.artist-list li {
+line-height: 1.3;
+font-size: 9px;
+text-align: center;}
+
+.artist-list a {
+word-wrap: break-word;
+text-decoration: none;}
+
+.tag-list dt {
+text-transform: capitalize;}
+
+.tag-list dd {
+text-indent: 13px;}
+
+.tag-list dd span {
+white-space: nowrap;}
+
+.next-page {
+font-weight: bold;
+text-transform: lowercase;}
+
+/* ------------------------------------------------------------------------- */
+/* SEARCH
+/* ------------------------------------------------------------------------- */
+.search h1 {
+word-wrap: break-word;}
+
+/* ------------------------------------------------------------------------- */
+/* STOREFRONT
+/* ------------------------------------------------------------------------- */
+.storefront-intro h1,
+.storefront-intro h2 {
+line-height: 0.95;
+font-size: 2em;}
+
+.storefront-intro h2 {
+font-size: 3.2em;}
+
+/* Feature Carousel */
+.feature-carousel-tabs a {
+text-decoration: none;
+font-size: 1.5em;}

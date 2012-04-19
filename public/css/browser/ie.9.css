@@ -1,0 +1,22 @@
+﻿/*
+ * IE9 Workounds, Fixes and Hacks for 7digital.com
+ * (c) 7digital.com
+ */
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > FORMS
+/* ------------------------------------------------------------------------- */
+#user-tools button {
+padding: 2px 9px;}
+
+.storefront .search-form .cta {
+top: 0;}
+
+/* ------------------------------------------------------------------------- */
+/* RELEASE PAGE
+/* ------------------------------------------------------------------------- */
+.popularity-bar {
+background: #CADAE2;}
+
+.popularity-value {
+background: #4B9DC9;}

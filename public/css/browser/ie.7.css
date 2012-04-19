@@ -1,0 +1,251 @@
+﻿/*
+ * IE7 Workounds, Fixes and Hacks for 7digital.com
+ * (c) 7digital.com
+ */
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > BASE ELEMENTS
+/* ------------------------------------------------------------------------- */
+table {
+border-style: hidden;
+border-collapse: collapse;} 
+
+/* bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+img {
+-ms-interpolation-mode: bicubic;}
+
+.price {
+padding-right: 6px;}
+
+hr {
+height: 2px;}
+
+.zoom {
+cursor: url(~/static/graphics/cursors/zoomin.cur), pointer;}
+
+/* DATA URI OVERRIDES */
+#c {
+background-image: url(~/static/graphics/shared/noised.png);}
+
+.vertical .carousel-control {
+background-image: url(~/static/graphics/shared/cccbc4-vertical.png);}
+
+fieldset input[type="text"],
+fieldset input[type="password"],
+fieldset input[type="select"],
+fieldset input[type="search"],
+fieldset input[type="email"],
+fieldset input[type="date"],
+fieldset select {
+background-image: url(~/static/graphics/forms/input-alt.png);}
+
+/* ------------------------------------------------------------------------- */
+/* FORMS > BUTTON STRIPS
+/* ------------------------------------------------------------------------- */
+button {
+padding: 0 0 2px;}
+
+.download-button {
+display: inline-block;
+clear: both;}
+
+/* ------------------------------------------------------------------------- */
+/* FORMS > FEEDBACK
+/* ------------------------------------------------------------------------- */
+.feedback {
+overflow: auto;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > BASE ELEMENTS > HEADINGS
+/* ------------------------------------------------------------------------- */
+.sidebar-heading {
+padding-left: 9px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > PLAYER
+/* ------------------------------------------------------------------------- */
+#progress-bar {
+margin-top: -18px;}
+
+#lb-start {
+top: 17px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > USER HEADER
+/* ------------------------------------------------------------------------- */
+#page-head {
+padding-bottom: 9px;}
+
+#country-select-header {
+width: 42px;}
+
+#country-select-header .arrow-tag {
+top: -14px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > HEADER
+/* ------------------------------------------------------------------------- */
+#user-tools {
+height: 30px;
+width: 440px;
+float: right;}
+
+#user-tools label,
+#user-tools button,
+#user-tools input {
+float: left;
+margin: 0 0 0 3px;}
+
+#user-tools button {
+position: relative;
+top: 5px;
+padding: 1px 6px;
+margin-right: 3px;}
+
+#user-tools label {
+margin-top: -15px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > FOOTER
+/* ------------------------------------------------------------------------- */
+#social li {
+display: inline-block;}
+
+#newsletter-form * {
+z-index: 1;}
+
+#newsletter-form button {
+z-index: 2;}
+
+#newsletter-form label {
+z-index: 3;}
+
+#newsletter button {
+padding-top: 3px;}
+
+#newsletter input {
+width: 185px;}
+
+#copyright {
+float: none;
+text-align: right;}
+
+.flyout {
+width: 200px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > RELEASE UNIT
+/* ------------------------------------------------------------------------- */
+.add {
+position: relative;
+top: 3px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > CAROUSELS
+/* ------------------------------------------------------------------------- */
+.horizontal .preview {
+right: 8px;
+bottom: 9px;}
+
+.horizontal .scrollable {
+margin-top: 24px;}
+
+.pager {
+position: relative;
+top: 9px;}
+
+.horizontal .pager a {
+float: left;}
+
+.horizontal .pager {
+position: absolute;
+top: 9px;
+right: 3px;
+text-align: center;}
+
+.vertical .unit {
+width: 267px;}
+
+.vertical .pager {
+position: absolute;
+top: 6px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > PLAYER
+/* ------------------------------------------------------------------------- */
+#jplayer_load_bar {
+top: 16px;}
+
+#lb-end,
+#lb-start {
+top: 17px;}
+
+/* ------------------------------------------------------------------------- */
+/* RELEASE PAGE
+/* ------------------------------------------------------------------------- */
+tfoot td .buy-link {
+margin-top: 0;}
+
+.trackpreview .preview {
+float: left;}
+
+.release-details {
+overflow: auto;}
+
+.quality-selector {
+margin-bottom: 12px;}
+
+tfoot .play-all {
+width: 300px;}
+
+.packshot .play-all {
+width: 8em;}
+
+.preview-all {
+float: left;
+margin-right: 3px;}
+
+/* ------------------------------------------------------------------------- */
+/* DOWNLOAD PAGE
+/* ------------------------------------------------------------------------- */
+.download-button {
+display: inline-block;}
+
+.download-options {
+float: left;
+left: 50%;
+position: relative;}
+
+.download-options li {
+float: left;
+position: relative;
+right: 50%;}
+
+#download-manager-status {
+position: relative;
+float: right;
+margin-top: -58px;}
+
+.pagesize-selector {
+width: 200px;}
+
+/* ------------------------------------------------------------------------- */
+/* DOWNLOAD OPTIONS MODAL
+/* ------------------------------------------------------------------------- */
+#download-choice .choice {
+width: 50%;
+padding: 0;}
+
+/* ------------------------------------------------------------------------- */
+/* STOREFRONT
+/* ------------------------------------------------------------------------- */
+.page-separator {
+height: 1px;}
+
+.feature-carousel-tabs li {
+width: 241px;
+float: left;}
+
+.fullwidth-carousel {
+height: 1%;}

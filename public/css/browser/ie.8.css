@@ -1,0 +1,248 @@
+﻿/*
+ * Workarounds for all IE browsers < 9
+ * Most of this is concerned with fallbacks for the lack of CSS3 support
+ * needing img alternatives for player/icons etc.
+ * (c) 7digital.com
+ */
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > COMMON STYLES
+/* ------------------------------------------------------------------------- */
+.packshot img {
+border: 1px solid #cccbc4;}
+
+.overflow {
+height: 500px;
+overflow-x: hidden;
+overflow-y: scroll;}
+
+.sidebar-heading {
+background-image: url(~/static/graphics/shared/sidebar-heading.png);}
+
+.search-icon {
+background: url(~/static/graphics/icons/search-icon.png) no-repeat 0 0;}
+
+.active-radio,
+.inactive-radio {
+background: url(~/static/graphics/shared/radio-ticks.png) no-repeat 0 3px;}
+
+.inactive-radio {
+background-position: 0 -17px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > PLAYER
+/* ------------------------------------------------------------------------- */
+#pb-end {
+right: -6px;
+background: url(~/static/graphics/player/pb-end.png);}
+
+#jplayer_load_bar {
+height: 9px;
+background: #232323;}
+
+#lb-start,
+#lb-end {
+display: block;
+position: absolute;
+top: -1px;
+width: 3px;
+height: 11px;}
+
+#lb-start {
+top: 0;
+left: -3px;
+background: url(~/static/graphics/player/lb-start.png) no-repeat 0 0;}
+
+#lb-end {
+width: 12px;	
+right: -8px;
+background: url(~/static/graphics/player/lb-end.png) no-repeat right top;}
+
+#progress ul {
+padding: 0 3em;}
+
+/* Play Buttons */
+.css-icon:after,
+.css-icon:before {
+display: none;}
+
+#controls {
+background: none;}
+
+#controls span {
+border: none;
+height: 31px;
+width: 40px;
+background: url(~/static/graphics/sprites/player-controls.png) no-repeat 0 0;}
+
+#control-play span {
+background-position: -40px 0;}
+
+#control-pause span {
+background-position: -40px -31px;}
+
+#control-back span {
+width: 39px;
+background-position: 0 0;}
+
+#control-forward span {
+background-position: -81px 0;}
+
+#control-forward span:active {
+background-position: -81px -31px;}
+
+#control-back span:active {
+background-position: 0 -31px;}
+
+#control-play b,
+#control-pause b {
+display: none;}
+
+/* Player Pin */
+#player-pin {
+background: url(~/static/graphics/player/pin.png) no-repeat 0 -15px;
+border: none;}
+
+#player-pin.active,
+#player-pin:active {
+border: none;
+background: url(~/static/graphics/player/pin.png);}
+
+/* Volume */
+#volume {
+background: url(~/static/graphics/player/volume-icon.png) no-repeat 2px 1px;}
+
+#volume.muted {
+background-position: 2px -10px;}
+
+.volume-indicator {
+display: none;}
+
+/* Playlists */
+#now-playing {
+left: 1px;
+top: 3px;}
+
+#now-playing-text {
+overflow: hidden;
+background: url(~/static/graphics/player/playlist.png) no-repeat 2px -15px;
+padding: 0 0 0 22px;}
+
+#now-playing.active-playlist #now-playing-text {
+background-position: 2px 0;}
+
+#playlist-button {
+display: none;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > FORMS
+/* ------------------------------------------------------------------------- */
+#user-tools button {
+padding: 2px 9px;}
+
+input.focus-text {
+line-height: 1;}
+
+#page.access .validation-msg {
+bottom: auto;
+top: 54px;}
+
+.add-success {
+background-color: #10a121;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > CAROUSELS
+/* ------------------------------------------------------------------------- */
+.carousel-control span,
+.carousel-control:hover span {
+width: 28px;
+height: 28px;
+border: none;
+background: url(~/static/graphics/shared/carousel-buttons.png) no-repeat 0 0;}
+
+.next span {
+right: 2px;}
+
+.prev span {
+left: 2px;}
+
+#page .carousel-control span:after {
+content: '';}
+
+.vertical .carousel-control {
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQYlWM6c/rIfyZjE2tGABrhBAIDe3BmAAAAAElFTkSuQmCC);}
+
+.next span {
+background-position: -28px 0;}
+
+.next:hover span {
+background-color: transparent;
+background-position: -84px 0;}
+
+.prev span {
+background-position: 0 0;}
+
+.prev:hover span {
+background-position: -56px 0;}
+
+.disabled.carousel-control span {
+background-position: -112px 0;}
+
+.vertical .carousel-control span {
+width: 20px;
+height: 20px;
+padding: 3px 0;
+background: url(~/static/graphics/shared/carousel-buttons-vertical.png) no-repeat 0 0;}
+
+.vertical .next span {
+bottom: -5px;
+background-position: -20px 0;}
+
+.vertical .prev:hover span {
+background-position: -40px 0;}
+
+.vertical .next:hover span {
+background-position: -60px 0;}
+
+.vertical .disabled span,
+.vertical .disabled:hover span {
+background-position: -80px 0;}
+
+.horizontal .disabled span,
+.vertical .disabled span {
+background-color: transparent;}
+
+/* Carousel Paging */
+#page .pager a {
+background: url(~/static/graphics/shared/pager.png) no-repeat 0 0;}
+
+#page .pager a:hover {
+background-position: 0 -8px;}
+
+#page .pager a.active {
+background-position: 0 -16px;}
+
+/* Tables */
+.sortable span {
+background: url(~/static/graphics/shared/sort.png) no-repeat left 4px;}
+
+.asc span {
+background: url(~/static/graphics/shared/sort-asc.png) no-repeat left 4px;}
+
+.desc span {
+background: url(~/static/graphics/shared/sort-desc.png) no-repeat left 4px;}
+
+/* ------------------------------------------------------------------------- */
+/* RELEASE PAGE
+/* ------------------------------------------------------------------------- */
+.popularity-bar {
+background: url(~/static/graphics/shared/popularity.png) repeat-x 0 -18px;}
+
+.popularity-value {
+background: url(~/static/graphics/shared/popularity.png) repeat-x 0 0;}
+
+/* ------------------------------------------------------------------------- */
+/* STOREFRONT
+/* ------------------------------------------------------------------------- */
+.storefront .search-form .cta {
+top: 5px;}

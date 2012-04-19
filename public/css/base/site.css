@@ -1,0 +1,40 @@
+body div
+{
+	padding: 10px;
+}
+.functionalpart-box
+{
+	border: 1px solid #7a7a7a;
+	background-color: #f5f4eb;
+	padding: 8px;
+}
+.functionalpart-box form input
+{
+	width: 386px;
+	padding: 3px;
+	margin-bottom: 5px;
+}
+.artist-search-result
+{
+	
+}
+.clear
+{
+	clear:both;
+}
+.width400
+{
+	width: 400px;
+}
+.width250
+{
+	width: 250px;
+}
+.artistchart-image
+{
+	width: 70px;
+}
+.basket
+{
+	margin-left:19px;
+}

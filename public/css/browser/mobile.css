@@ -1,0 +1,39 @@
+﻿/*
+ * Mobile Optimisations for 7digital.com
+ * w/ help from html5boilerplate.com
+ * (c) 7digital.com
+ */
+
+@media all and (orientation:portrait) { }
+
+@media all and (orientation:landscape) { }
+
+/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
+   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+
+	/* Comment out if you want iOS and WinMobile 
+	   to mobile-optimize the text for you 
+		j.mp/textsizeadjust
+    */
+	html {
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;}
+
+	body {
+	min-width: 0;
+	font-family: Helvetica, 'Droid Sans', sans-serif;}
+
+	#player-container,
+	#player-stub .feedback,
+	.preview-all {
+	display: none !important;}
+
+	#header {
+	margin-bottom: 9px;
+	overflow: hidden;
+	position: static;}
+
+	#page {
+	padding-top: 0;}
+}

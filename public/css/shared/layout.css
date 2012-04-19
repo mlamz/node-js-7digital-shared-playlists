@@ -1,0 +1,2092 @@
+﻿/*
+ * Shared Layout for 7digital.com
+ * (c) 7digital.com
+ */
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > BASE ELEMENTS
+/* ------------------------------------------------------------------------- */
+body {
+min-width: 990px;}
+
+html, body {
+height: 100%;}
+
+body > #c {
+height: auto;
+min-height: 100%;}
+
+#page {
+position: relative;
+margin: 0 auto;
+padding: 48px 11px 246px;
+width: 966px;}
+
+ol, ul {
+margin-bottom: 18px;}
+
+p, ul, ol, dl, dialog {
+margin: 0 0 18px;}
+
+dt {
+float: left;
+margin-right: 1em;}
+
+img {
+padding: 4px;}
+
+/* Tables */
+table {
+width: 100%;
+margin-top: 3px;}
+
+td, th {
+padding: 3px 9px;}
+
+tfoot td {
+padding: 3px 9px;}
+
+.sorter {
+display: block;
+padding-left: 10px;}
+
+hr {
+margin: 0 0 9px;
+height: 0;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > BASE ELEMENTS > HEADINGS
+/* ------------------------------------------------------------------------- */
+.sidebar-heading {
+height: 34px;
+line-height: 32px;
+padding-left: 3px;
+position: relative;
+clear: both;}
+
+.sidebar-heading:after,
+.sidebar-heading:before,
+.left-sidebar-heading:before,
+.left-sidebar-heading:after {
+position: absolute;
+width: 11px;
+height: 45px;
+top: 0;}
+
+.sidebar-heading:after {
+right: -11px;}
+
+.sidebar-heading:before,
+.left-sidebar-heading:after {
+left: -5px;
+width: 5px;}
+
+.left-sidebar-heading:before {
+right: auto;
+width: 11px;
+left: -11px;}
+
+.left-sidebar-heading:after {
+left: auto;
+right: -5px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI CHROME ELEMENTS
+/* ------------------------------------------------------------------------- */
+.chrome-button {
+width: 15px;
+height: 15px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > COMMON STYLES
+/* ------------------------------------------------------------------------- */
+.hide {
+position: absolute;
+left: -9999em;
+display: block;
+height: 0;
+width: 0;
+font-size: 0;
+overflow: hidden;
+padding: 0;
+margin: 0;
+border: none;}
+
+.table-header {
+ margin-top: -9px;}
+
+.thin-col p {
+margin-right: 3px;}
+
+.l {
+margin-right: 6px;
+float: left;}
+
+.r {
+margin-left: 6px;
+float: right;}
+
+.icon {
+padding-left: 20px;}
+
+.icon-right {
+padding-right: 16px;}
+
+.floated-list li {
+float: left;}
+
+.action-list li {
+line-height: 28px;
+padding: 3px 6px 6px;}
+
+.list-actions {
+top: 2px;
+float: right;}
+
+.list-actions strong {
+position: relative;
+bottom: 3px;}
+
+.list-actions li {
+padding: 0 4px;}
+
+.country-code {
+display: block;
+padding-left: 24px;}
+
+.offline,
+.enabled,
+.status-disabled {
+padding-left: 16px}
+
+.collapsible {
+display: none;}
+
+.active-radio,
+.inactive-radio {
+position: relative;}
+
+.active-radio:before,
+.inactive-radio:before {
+top: 3px;
+left: 0;
+width: 12px;
+height: 12px;}
+
+.volume-indicator:after {
+left: 2px;
+width: 3px;
+height: 4px;
+top: 4px;}
+
+.active-radio:after {
+top: 6px;
+left: 3px;
+width: 8px;
+height: 8px;}
+
+.muted:after {
+left: 1px;
+top: 5px;}
+
+.muted:before {
+width: 10px;
+height: 10px;
+left: 0;}
+
+.bulleted li {
+margin-bottom: 3px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > TABS
+/* ------------------------------------------------------------------------- */
+.tabs {
+overflow: hidden;
+margin: 0;}
+
+.tabs a {
+display: block;
+margin: 0;
+padding: 5px 12px;}
+
+.tabs a {
+position: relative;
+top: -1px;}
+
+.tabs a.current {
+top: 0;
+padding-top: 4px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > PAGINATION
+/* ------------------------------------------------------------------------- */
+.digit-pager {
+margin: 6px 0;
+overflow: visible;}
+
+.digit-pager li {
+margin: 0 3px;}
+
+.digit-pager li a,
+.digit-pager li a.current {
+padding: 3px 9px;
+position: static;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > TOOLTIPS
+/* ------------------------------------------------------------------------- */
+.tooltip {
+max-width: 300px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > HEADER
+/* ------------------------------------------------------------------------- */
+#header {
+z-index: 98;
+top: 0;
+left: 0;
+position: fixed;
+width: 100%;
+margin-bottom: 14px;
+min-width: 966px;}
+
+#header li {
+float: left;}
+
+#header li a {
+display: block;
+padding: 7px 5px;}
+
+#header #logo a {
+display: block;
+position: relative;
+margin: 3px 0 2px 6px;
+top: 1px;
+text-indent: -999em;
+width: 32px;
+height: 26px;
+padding: 0 2px;}
+
+#header ul {
+margin: 0;}
+
+#skip {
+width: 0;
+height: 0;
+padding: 0;
+position: absolute;
+text-indent: -999em;}
+
+#header label {
+margin-right: -1px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > BASKET
+/* ------------------------------------------------------------------------- */
+.basket thead {
+display: none;}
+
+.basket td {
+padding: 6px .5em;}
+
+.checkout-register td,
+.checkout-register th {
+padding: 6px;}
+
+.basket .delete {
+width: 14px;
+float: right;}
+
+.summary-art img {
+padding: 2px;
+vertical-align: middle}
+
+.overflow tbody {
+height: 500px;
+overflow-x: hidden;
+overflow-y: scroll;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > HEADER > BASKET
+/* ------------------------------------------------------------------------- */
+#basket {
+float: left;}
+
+#basket .basket {
+margin: 0;}
+
+#view-basket {
+display: none;
+position: absolute;
+top: 34px;
+margin-left: -161px;
+left: 50%;
+width: 324px;
+z-index: 97;}
+
+#view-basket li {
+float: none;}
+
+#view-basket td a {
+display: inline;}
+
+#view-basket ul {
+overflow: auto;}
+
+#basket .order-discounts,
+#basket .order-subtotal {
+display: none;}
+
+#basket .feedback {
+margin: 0;}
+
+#header #basket-link {
+padding: 0 0 0 9px;
+position: relative;}
+
+#view-basket .button-strip {
+margin: 3px 0;}
+
+#header #toggle-basket {
+display: block;
+padding: 7px 9px 7px 20px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > HEADER > SEARCH
+/* ------------------------------------------------------------------------- */
+#user-tools form {
+float: right;}
+
+.search-icon {
+text-indent: -9999px;
+display: inline-block;
+height: 17px;
+position: relative;
+text-indent: -9999px;
+width: 24px;}
+
+#user-tools label,
+#user-tools button,
+#user-tools input {
+float: none;
+display: inline;
+position: relative;}
+
+#user-tools label {
+top: 1px;
+margin-left: 6px;}
+
+#user-tools button {
+margin: 1px 6px 0 0;
+padding-bottom: 5px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > FOOTER
+/* ------------------------------------------------------------------------- */
+#footer {
+width: 100%;    
+padding: 18px 0 0;
+margin-top: -199px;
+height: 228px;
+position: relative;
+clear: both;
+z-index: 3;}
+
+#footer dl {
+width: 30%;
+margin: 0;}
+
+#footer dd,
+#footer dt {
+float: none;
+padding-bottom: .25em;
+margin: 0 9px;}
+
+#back-to-top {
+padding-left: 6px;}
+
+#country-select-footer {
+margin: 16px 16px 0;
+height: 24px;}
+
+#country-select-footer strong {
+display: block;
+padding-right: 1em;
+cursor: pointer;
+padding-left: 25px;
+height: 24px;
+position: relative;
+bottom: 2px;}
+
+#country-select-footer strong span {
+position: relative;
+top: 3px;
+padding-top: 2px;}
+
+#country-select-footer .flyout-contents {
+position: absolute;
+display: none;} 
+
+#country-select-footer li {
+height: auto;
+float: none;}
+
+#country-select-footer li li {
+float: left;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > FOOTER > NEWSLETTER
+/* ------------------------------------------------------------------------- */
+#newsletter {
+width: 470px;
+padding: 0;
+margin: -17px 12px 0;
+position: relative;}
+
+#newsletter h2 {
+padding-bottom: 6px;}
+
+#newsletter input {
+display: inline;
+margin-left: 0;
+width: 180px;}
+
+#newsletter-form fieldset {
+padding-bottom: 18px;}
+
+#newsletter-response {
+margin: 0 0 9px;}
+
+#newsletter-response.ready,
+#newsletter-response.ready span {
+text-indent: 0;
+padding: 0;
+margin: 0 0 .5em;}
+
+#newsletter-response.error {
+padding: 6px;}
+
+#newsletter-response.feedback {
+margin: 16px 0 3px;}
+
+#signup-newsletter {
+width: 266px;
+margin-left: 12px;}
+
+#social {
+padding-left: 10px;}
+
+#social-wrapper {
+margin-left: 280px;
+padding: 18px 18px 0 0}
+
+#social {
+height: 100%;}
+
+#social li {
+height: 20%;
+margin-bottom: 9px;
+padding: 0 0 6px 28px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > FOOTER > COPYRIGHT
+/* ------------------------------------------------------------------------- */
+#copyright {
+clear: right;
+padding-bottom: 9px;	
+margin: 18px 12px 0 0;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > PAGE HEADER
+/* ------------------------------------------------------------------------- */
+.breadcrumbs {
+margin: 0 -3px 9px 0;
+padding-left: 3px;}
+
+.breadcrumbs li {
+margin-right: .5em;
+position: relative;
+top: 3px;}
+
+.logo-link {
+top: 0;}
+
+.logo-link a {
+width: 83px;
+height: 24px;
+text-indent: -999em !important;
+display: block;}
+
+#user-navigation {
+z-index: 97;	
+margin-bottom: 0;
+position: relative;
+top: 3px;}
+
+#user-navigation li {
+margin: 0 3px;
+padding-right: 6px; }
+
+#user-navigation a {
+position: relative;
+bottom: 1px;}
+
+#user-navigation li:last-child {
+margin-right: 0;}
+
+#user-navigation #country-select-header {
+padding: 0;
+margin-top: -1px;}
+
+#country-select-header .flyout-activator span {
+display: block;
+width: 24px;
+height: 24px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > PAGE HEADER > COUNTRY SELECT
+/* ------------------------------------------------------------------------- */
+#country-select-header .flyout-contents {
+top: 30px;
+right: 5px;
+bottom: auto;
+left: auto;
+margin: 0;
+padding: 0;
+z-index: 98;}
+
+#country-select-header .flyout-activator {
+display: block;
+position: relative;
+padding: 0 2px 0 16px;}
+
+#country-select-header img {
+padding: 0;
+margin-top: -1px;} 
+
+#country-select-header li {
+margin: 0;
+padding: 0;}
+
+#country-select-header .arrow-tag {
+right: 26px;
+left: auto;
+top: -11px}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > MODAL WINDOW
+/* ------------------------------------------------------------------------- */
+.modal {
+width: 760px;
+position: relative;
+display: none;
+padding: 10px;}
+
+.modal .close {
+position: absolute;
+width: 28px;
+height: 28px;
+top: -20px;
+right: -20px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > PLAYER
+/* ------------------------------------------------------------------------- */
+/* Player */ 
+#player-container {
+width: 100%;
+clear: both;
+left: 0;
+bottom: -49px;
+position: fixed;
+height: 48px;
+z-index: 98;}
+
+#player {
+z-index: 99;
+height: 48px;
+padding-left: 179px;
+padding-right: 108px;}
+
+#player-stub {
+height: 0;
+width: 100%;}
+
+#player-stub .feedback {
+display: none;
+width: 760px;
+position: absolute;
+top: 57px;
+left: 50%;
+margin-left: -380px;
+z-index: 99;}
+
+#player-left,
+#progress,
+#player-right {
+margin: 0;
+float: left;
+position: relative;}
+
+#player-left {
+width: 179px;
+margin-right: -100%;
+right: 179px;}
+
+#player-right {
+width: 108px;
+margin-right: -108px;}
+
+.player-separator {
+position: absolute;
+top: 0;
+display: block;
+width: 1px;
+height: 100%;}
+
+#logo-separator {
+left: 0;}
+
+#controls-separator {
+left: 163px;}
+
+#volume-separator {
+right: 82px;}
+
+#right-separator {
+right: 1px;}
+
+#player ul {
+position: relative;
+height: 48px;}
+
+/* Controls */
+#controls {
+position: absolute;
+top: 7px;
+left: 18px;
+height: 31px;
+display: block;}
+
+#controls li {
+float: left;
+position: relative;}
+
+#controls span {
+position: relative;
+display: block;
+width: 40px;
+height: 30px;}
+
+#control-play span,
+#control-pause span {
+width: 40px;
+margin: 0 1px;}
+
+#control-pause span {
+display: block;}
+
+#control-forward span {
+width: 42px;}
+
+#controls span:before,
+#controls span:after {
+top: 16px;
+left: 16px;}
+
+#control-play span:after {
+margin-top: -8px;}
+
+#control-pause span:after {
+top: 10px;
+width: 3px;
+height: 12px;}
+
+#control-forward span:before,
+#control-forward span:after {
+margin-top: -6px;}
+
+#control-forward:active span:before,
+#control-forward:active span:after,
+#control-back:active span:before,
+#control-back:active span:after {
+top: 17px;}
+
+#control-forward span:before {
+left: 10px;}
+
+#control-forward span:after {
+left: 18px;}
+
+#control-forward:after {
+position: absolute;
+top: 11px;
+left: 27px;
+height: 10px;}
+
+#control-forward:active:after {
+top: 11px;}
+
+#control-back span:before,
+#control-back span:after {
+margin-top: -6px;}
+
+#control-back span:before {
+left: 6px;}
+
+#control-back span:after {
+left: 14px;}
+
+#control-back:after {
+height: 10px;
+position: absolute;
+top: 11px;
+left: 11px;}
+
+#control-back:active:after {
+top: 11px;}
+
+#control-play b,
+#control-pause b {
+position: absolute;
+display: block;
+width: 6px;
+height: 6px;
+top: 4px;
+right: 2px;}
+
+#control-play b {
+top: 3px;}
+
+/* Now-Playing */
+#now-playing {
+position: relative;
+display: block;
+margin: 0;
+right: 2px;
+overflow: hidden;}
+
+#now-playing strong {
+float: left;
+top: 4px;
+left: 2px;
+position: relative;
+margin-right: 9px;}
+
+#now-playing-text {
+padding: 2px 0 2px 2px;}
+
+/* Progress */
+#progress {
+width: 100%;}
+
+#progress ul {
+padding: 0 2.5em;
+position: relative;
+top: 6px;
+height: 11px;}
+
+.jp-current-time,
+.jp-remaining {
+position: absolute;
+top: -4px;}
+
+.jp-current-time {
+left: 0;}
+
+.jp-remaining {
+right: -12px;}
+
+#progress-bar {
+position: relative;}
+
+/* Load bar is the background that indicates total play buffer */
+.jp-seek-bar {
+padding-right: 5px;
+position: relative;
+height: 9px;}
+
+/* Play Bar is the progress indicator */
+.jp-play-bar {
+position: absolute;
+top: 0;
+left: 0;
+height: 9px;
+display: block;}
+
+#pb-start,
+#pb-end {
+width: 3px;
+height: 9px;
+display: block;
+position: absolute;}
+
+#pb-start {
+left: -3px;}
+
+#pb-end {
+width: 9px;
+right: -9px;}
+
+/* Pin Button */
+/* Buffering Indicator */
+#player-pin,
+#buffer-indicator {
+position: absolute;
+top: 4px;
+right: 9px;}
+
+#buffer-indicator {
+width: 17px;
+height: 17px;
+display: none;
+top: 6px;
+right: 26px;}
+
+/* Playlist */
+#playlist-button {
+display: inline-block;
+position: relative;
+top: 5px;}
+
+#playlist-button:before,
+#playlist-button:after {
+top: 4px;
+left:4px;
+width:9px;
+height: 1px;}
+
+#playlist-button:after {
+left:2px;
+width:1px;}
+
+.player-down #playlist {
+display: none;}
+
+#playlist {
+display: none;
+position: absolute;
+bottom: 49px;
+left: 307px;
+width: 36em;}
+
+#playlist strong {
+margin: 3px 9px;
+display: block;}
+
+#playlist ul {
+height: auto;
+overflow: auto;
+max-height: 440px;}
+
+#playlist li {
+position: relative;
+padding: .25em 24px .25em 1em;}
+
+#playlist-close {
+position: absolute;
+top: 2px;
+right: 3px;
+height: 18px;
+width: 18px;
+text-indent: -9999em;
+display: block;}
+
+.currently-playing a {
+padding-left: 10px;
+padding-right: 6px;}
+
+#playlist span {
+position: absolute;
+right: 6px;
+top: 2px;
+width: 1em;}
+
+/* Volume */
+#volume {
+top: 27px;
+right: 10px;
+width: 56px;
+height: 12px;
+position: absolute;
+display: block;
+padding-left: 12px;}
+
+.jp-volume-bar {
+height: 12px;
+top: 0;}
+
+.jp-volume-bar-value {
+height: 12px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > CAROUSELS
+/* ------------------------------------------------------------------------- */
+.carousel {
+position: relative;
+margin-bottom: 18px;}
+
+.carousel img {
+display: block;}
+
+.scrollable {
+position: relative;
+overflow: hidden;
+margin: 0 38px;}
+
+.carousel .unit {
+margin: 0 6px 0 0;
+width: 108px;
+height: 184px;
+position: relative;}
+
+.unit-title {
+padding: 0 3px;}
+
+.packshot-link {
+margin: 0 auto 3px;
+position: relative;
+display: block;}
+
+.carousel img {
+overflow: hidden;
+height: 100px;
+width: 100px;}
+
+/* Video Packshots */
+.video-overlay {
+position: absolute;
+display: block;
+top: 4px;
+left: 4px;
+width: 100px;
+height: 100px;}
+
+.vertical .video-overlay,
+.videolist .video-overlay,
+.productlist .video-overlay {
+width: 50px;
+height: 50px;
+top: 1px;
+left: 1px;}
+
+.productlist .video-overlay {
+top: 2px;
+left: 2px;}
+
+.carousel .pages {
+margin-top: 3px;
+width: 20000em;
+position: relative;}
+
+.page {
+margin: 0;
+padding: 0 3px;
+float: left;}
+
+.horizontal-scrollable .unit-title {
+margin-top: 3px;}
+
+/* Carousel Controls */
+.carousel-control,
+.carousel-control:active {
+position: absolute;
+width: 32px;
+height: 100%;
+top: 0;
+display: block;}
+
+.carousel-control span {
+position: absolute;
+top: 50%;
+margin-top: -14px;
+display: block;
+width: 24px;
+height: 24px;}
+
+.carousel-control:active span {
+margin-top: -13px;}
+
+.prev span:after,
+.next span:after {
+display: block;
+position: absolute;
+top: 0;
+left: 4px;
+width: 24px;
+height: 24px;}
+
+.next {
+right: 0;}
+
+.next span {
+right: 3px;}
+
+.prev span {
+left: 3px;}
+
+.prev span:after {
+left: 3px;}
+
+/* Carousel Header */
+.carousel-header {
+margin-top: 9px;
+margin-bottom: 3px;}
+
+/* Item Count */
+.item-count {
+position: absolute;
+left: 40px;
+top: 6px;}
+
+/* Carousel Paging */
+.pager {
+height: 32px;
+padding-right: 42px;
+clear: both;}
+
+.pager a {
+width: 6px;
+height: 6px;
+display: inline-block;
+margin: 1px 4px;}
+
+.pager a.active,
+.pager a:hover {
+width: 8px;
+height: 8px;
+margin: 0 3px;}
+
+/* Vertical Carousels */
+.vertical {
+overflow: hidden;
+margin-bottom: 9px;}
+
+.vertical .pages {
+width: auto;
+height: 20000em;}
+
+.vertical .unit {
+width: 100%;
+margin-bottom: 3px;
+float: none;
+height: 67px;}
+
+.vertical img {
+width: 48px;
+height: 48px;
+padding: 2px;} 
+
+.vertical .item-count {
+margin: 0 28px 3px 0;
+padding-bottom: 3px;
+width: 270px;
+position: static;}
+
+.vertical .pager {
+position: absolute;
+right: 0;
+top: -8px;
+padding-right: 28px;}
+
+.vertical .packshot {
+width: 52px;
+height: 52px;
+float: left;
+position: relative;
+top: 4px;}
+
+.vertical img {
+width: 50px;
+height: 50px;}
+
+.vertical .unit-title,
+.vertical .price-unit {
+margin-left: 58px;}
+
+.vertical .packshot .preview,
+.vertical .packshot .preview:active {
+right: 2px;
+bottom: 2px;}
+
+.vertical .scrollable {
+height: 428px;
+margin: 0 26px 0 0;}
+
+.vertical .itemcount-1 {
+height: 80px;}
+
+.vertical .itemcount-2 {
+height: 150px;}
+
+.vertical .itemcount-3 {
+height: 220px;}
+
+.vertical .itemcount-4 {
+height: 290px;}
+
+.vertical .itemcount-5 {
+height: 360px;}
+
+.vertical .carousel-control {
+width: 26px;
+height: 50%;
+right: 0;}
+
+.vertical .carousel-control span {
+width: 19px;
+height: 19px;}
+
+.vertical .prev span {
+top: 1px;
+margin: 0;}
+
+.vertical .prev:active span {
+top: 2px;}
+
+.vertical .next span {
+top: auto;
+bottom: 2px;}
+
+.vertical .next:active span {
+bottom: 1px;}
+
+.vertical .next {
+top: auto;
+bottom: 0;
+right: 0;}
+
+.vertical .next span:after,
+.vertical .prev span:after {
+top: 9px;
+left: 2px;}
+
+.vertical .prev span:after {
+top: 8px;}
+
+/* View More */
+.view-more {
+margin-top: -18px;
+padding: 6px 3px;}
+
+/* Static Carousel */
+.static-carousel .scrollable,
+.no-paging {
+margin: 0;}
+
+.no-paging .unit {
+margin: 0 9px;}
+
+.static-carousel,
+.static-carousel .page {
+margin-bottom: 0;}
+
+.static-carousel .page {
+padding: 0;}
+
+.static-carousel .unit {
+margin: 0 11px;}
+
+.static-carousel .itemcount-1,
+.static-carousel .itemcount-2,
+.static-carousel .itemcount-3 {
+margin-left: 0;}
+
+.static-carousel .itemcount-4 {
+margin-left: 66px;}
+
+/* Full Width Carousel */
+.fullwidth-carousel .unit {
+margin: 0 14px 9px;
+width: 109px;}
+
+.fullwidth-carousel .page {
+width: 966px;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > SLIDE CAROUSELS
+/* ------------------------------------------------------------------------- */
+.slide-carousel {
+position: relative;
+overflow: hidden;
+width: 640px;
+min-height: 299px;
+margin-bottom: 18px;}
+
+.slides-navigation {
+width: 157px;
+margin: 0;
+z-index: 1;
+min-height: 299px;}
+
+.slides-navigation a {
+display: block;
+padding: 8px;
+min-height: 43px;
+text-decoration: none;
+position: relative;}
+
+.slides-navigation li {
+position: relative;}
+
+.slides-navigation li:after {
+display: none;}
+
+.slides-navigation .active:after {
+display: block;
+content: '';
+height: 0;
+width: 0;
+position: absolute;
+right: -18px;
+top: 50%;
+margin-top: -9px;}
+
+.slides {
+position: absolute;
+top: 0;
+left: 0;
+width: 10000em;
+height: 100%;}
+
+.slides li {
+position: relative;
+width: 640px;
+height: 100%;}
+
+.slide-content {
+position: absolute;
+bottom: 9px;
+right: 0;
+width: 435px;
+padding: 9px;}
+
+.slide-content p,
+.slide-content h2 {
+margin: 0 auto 3px;}
+
+.slide-link {
+text-indent: -9999em;
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: 0}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > RELEASE UNIT
+/* ------------------------------------------------------------------------- */
+.unit li {
+float: none;}
+
+.price-unit {
+z-index: 96;}
+
+.unit .price-unit {
+margin-top: 3px;}
+
+.packshot {
+position: relative;}
+
+.add {
+padding: 2px;
+width: 32px;
+line-height: 1;}
+
+.preview {
+padding: 0;	
+width: 18px;
+height: 18px;}
+
+.packshot .preview,
+.packshot .preview:active {
+position: absolute;
+top: auto;
+bottom: 6px;
+right: 6px;}
+
+.add span {
+display: block;
+padding: 0;
+width: 24px;
+height: 15px;
+margin: 0 auto;}
+
+.price {
+top: 0;
+display: inline;
+padding-right: .25em;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > FLYOUT
+/* ------------------------------------------------------------------------- */
+.flyout {
+height: 24px;	
+width: auto;
+margin-top: 18px;
+margin-left: 9px;
+position: relative;}
+
+.flyout a,
+.flyout .country-code {
+display: block;
+padding: 4px 18px 4px 28px;}
+
+.flyout li {
+float: none;}
+
+.flyout span {
+padding-left: 6px;
+padding-bottom: 4px;}
+
+.flyout .arrow-tag {
+line-height: 0;
+margin-left: -15px;
+left: 50%;
+position: absolute;
+width: 0;}
+
+.dropdown .arrow-tag {
+top: -10px;}
+
+.flyout-contents {
+width: 18em;
+top: auto;
+bottom: 2.5em;
+left: 50%;
+margin: 0 0 0 -9em;
+position: absolute;
+display: none;}
+
+.flyout-contents ul {
+overflow: auto;
+padding: 0 0 6px 26px;}
+
+.flyout-contents li li {
+float: left;}
+
+.flyout-contents a {
+display: inline;
+padding: 0 3px;}
+
+.flyout span.country-code {
+padding-bottom: 0;}
+
+/* ------------------------------------------------------------------------- */
+/* RELEASE PAGE
+/* ------------------------------------------------------------------------- */
+.release-head {
+padding-bottom: 9px;}
+
+.release-head .thin-col {
+width: 360px;}
+
+#highres-packshot img {
+width: 350px;
+height: 350px;}
+
+.release-info {
+width: 598px;
+margin-left: 8px;}
+
+.release-head h1 {
+padding-bottom: 6px;
+margin: 3px 0 0 0;} 
+
+.release-head h2 {
+margin-top: -12px;
+margin-bottom: 18px;
+padding: 0 0 0 .25em;}
+
+.release .by {
+position: relative;
+bottom: .3ex;}
+
+.buy-link {
+margin: 6px 0;}
+
+.release-head .buy-link {
+margin: 24px 6px 18px;}
+
+.buy-link .add {
+height: auto;
+width: auto;
+padding: 4px 8px;
+margin-left: 0;}
+
+.buy-link .discount {
+position: relative;
+bottom: 1px;
+font-size: 11px;
+padding-left: 9px;}
+
+.play-all {
+margin: 0;}
+
+.packshot .play-all {
+position: absolute;
+top: auto;
+bottom: 13px;
+right: 7px;}
+
+.play-all .preview,
+.play-all .preview:active {
+right: auto;
+left: 5px;
+bottom: 4px;}
+
+.trackpreview .play-all .preview,
+.trackpreview .play-all .preview:active {
+bottom: auto;}
+
+.preview-link-text {
+display: inline-block;
+padding: 5px 6px;}
+
+.packshot .preview-link-text {
+padding-left: 27px;}
+
+.explicit {
+width: 90px;
+height: 57px;
+position: absolute;
+top: 8px;
+left: 10px;}
+
+.tag {
+padding-left: 12px;
+padding-right: 2px;}
+
+#artwork-viewer {
+width: 510px;
+height: 510px;}
+
+/* Quality Selector */
+.quality-selector {
+margin-top: 2px;
+margin-bottom: 2px;}
+
+.quality-selector h3 {
+margin: 0;
+padding: 0;
+float: left;}
+
+.quality-selector ul {
+margin-left: 9px;
+margin-bottom: 12px;
+position: relative;
+top: 1px;}
+
+.quality-selector li {
+margin-right: 9px;}
+
+.quality-selector .icon {
+padding-left: 19px;}
+
+/* Tracklisting */
+.tracklist {
+margin-bottom: 18px;}
+
+tbody .preview {
+margin: 3px auto;}
+
+tfoot .trackpreview {
+padding-left: 4px;}
+
+.trackformat {
+width: 34px;}
+
+.trackpreview,
+.tracknumber {
+width: 16px;}
+
+tbody .tracktime {
+width: 3em;}
+
+.tracktime span {
+width: 14px;
+height: 14px;
+display: block;
+margin: 0 auto;}
+
+.trackbuy {
+width: 7.5em;}
+
+.trackbuy .small {
+padding: 0;
+margin: 0;}
+
+.trackbuy .price-unit {
+float: right;}
+
+th.trackrating {
+width: 6em;}
+
+/* Popularity */
+.popularity-bar {
+width: auto;
+height: 16px;
+margin: 0 auto;
+display: block;}
+
+.popularity-value {
+height: 16px;
+display: block;}
+
+/* Formats */
+.format {
+display: inline-block;
+width: 3em;
+padding: 2px 3px;}
+
+.flac,
+.mpeg {
+width: 3.5em;}
+
+/* Release Details */
+.release-details {
+margin-bottom: 0;
+padding: 6px 0;}
+
+.release-details li {
+padding: 0 6px;
+display: inline;}
+
+.release-details .video-clip {
+padding-left: 20px;
+margin-left: 3px;}
+
+/* ------------------------------------------------------------------------- */
+/* CHECKOUT
+/* ------------------------------------------------------------------------- */
+#checkout-belt h3 {
+padding-bottom: 0;}
+
+#checkout-belt .small {
+display: block;}
+
+#order-summary {
+margin-right: -2px;
+padding: 9px 0;}
+
+#order-summary h3 {
+margin: 0 9px;}
+
+#order-summary .order-total th {
+padding-top: 8px;}
+
+#order-summary .basket {
+padding: 0 6px;}
+
+#order-summary .feedback {
+margin: 9px 9px 0;}
+
+.terms label {
+margin-bottom: 9px;
+margin-left: 9px;}
+	
+.terms input {
+top: 4px;}
+
+.checkout .cta {
+float: right;}
+
+.country-field em {
+margin-top: 4px;
+display: block;}
+
+#apply-voucher .validation-msg {
+bottom: -11px;}
+
+#dummy-checkout,
+#complete-checkout {
+float: right;}
+
+#complete-checkout {
+display: none;}
+
+#checkout-belt .button-strip li {
+margin: 0;}
+
+#add-card {
+display: none;
+margin-top: 9px;
+padding-top: 12px;}
+
+#add-card.show {
+display: block;}
+
+#pay-with-card {
+padding-bottom: 9px;}
+
+#checkout-belt h3 {
+margin: 0 0 9px;
+padding-top: 1px;}
+
+#checkout-belt .radio-label {
+padding: 0 0 0 56px;}
+
+#checkout-belt .creditcard {
+margin-top: 6px;}
+
+#stored-cards {
+position: relative;
+top: 10px;}
+
+#stored-cards span {
+display: none;}
+
+/* ------------------------------------------------------------------------- */
+/* DOWNLOAD PAGE
+/* ------------------------------------------------------------------------- */
+.trackstoggle {
+clear: both;
+position: relative;
+margin: 9px 0 3px;}
+
+.trackstoggle a {
+display: block;
+padding-left: 17px;}
+
+.download-options {
+display: table;
+margin: 0 auto 18px;}
+
+.download .focus-text {
+margin-bottom: 6px;}
+
+.download-options .focus-text {
+margin-top: 3px;}
+
+.primary-download-options {
+margin: 48px 0 36px;}
+
+#purchase-complete {
+position: relative;}
+
+#download-manager-status {
+margin: 0;}
+
+#download-manager-status li {
+margin: 6px 9px 0}
+
+.download .feedback {
+display: none;}
+
+.downloads .feedback {
+display: block;}
+
+.download .information {
+margin: 6px 0;	
+display: block;}
+
+#basket-empty {
+display: block;}
+
+/* ------------------------------------------------------------------------- */
+/* DOWNLOADS TABLE
+/* ------------------------------------------------------------------------- */
+.downloads tbody td {
+padding: 6px 9px;
+vertical-align: top;}
+
+.downloads .trackscount {
+position: relative;
+bottom: 1px;}
+
+.downloads .trackpreview img {
+margin-top: 3px;}
+
+.downloads .tracklisting {
+display: none;
+clear: both;}
+
+.tracklisting p {
+margin-bottom: 6px;}
+
+.downloads .tracklisting h4 {
+display: none;
+margin-bottom: 3px;}
+
+.downloads .tracklisting label {
+width: auto;
+float: left;
+padding: 0 3px 3px;
+margin-bottom: 0}
+
+.downloads th.trackpreview,
+.downloads th.trackdetails {
+width: 108px;}
+
+.downloads ol {
+margin: 0 -9px 9px;}
+
+.downloads ol li {
+padding: 3px 9px;
+clear: both;}
+
+.downloads tbody td.download-details {
+padding-top: 9px;}
+
+.download-details .downloadsize {
+margin: 3px 0 3px;}
+
+.download-details li {
+margin-bottom: 6px;}
+
+/* ------------------------------------------------------------------------- */
+/* DOWNLOAD OPTIONS MODAL
+/* ------------------------------------------------------------------------- */
+#download-manager-installer {
+width: 217px;
+margin: 18px auto 0;
+height: 180px;
+overflow: hidden;}
+
+#downloads-first-run {
+width: 760px;}
+
+#download-choice {
+overflow: hidden;}
+
+#download-choice .choice {
+float: left;
+width: 48%;
+margin-top: 9px;
+margin-bottom: 9px;
+padding: 0 1%;}
+
+#download-choice .choice img {
+display: block;
+margin: 0 auto 1em;}
+
+#download-choice #download-managed img {
+margin-top: 12px;}
+
+#download-managed {
+margin-right: -1px;}
+
+#download-choice ul,
+#install-complete ul {
+margin: 1em 2em;}
+
+#download-choice li,
+#install-complete li {
+margin-left: 1em;}
+
+#download-choice button {
+display: block;
+margin: 9px auto;}
+
+#download-choice h2 {
+margin-bottom: 18px;}
+
+#download-choice p {
+margin: 0 1em 1em;}
+
+#download-separately {
+margin: 45px 0 0;
+padding-top: 9px;}
+
+#downloads-first-run.no-zip-download {
+width: 480px;}
+
+.no-zip-download #download-as-zip {
+display: none;}
+
+.no-zip-download #download-managed {
+margin-top: 0;
+width: 100%;}
+
+.no-zip-download #download-managed  h3 {
+margin-top: 0;}
+
+/* Post App-Install */
+#install-complete {
+width: 744px;
+padding: 0 18px 9px;}
+
+#install-complete h2 {
+margin-bottom: 18px;}
+
+/* ------------------------------------------------------------------------- */
+/* SIGNUP / SIGNIN
+/* ------------------------------------------------------------------------- */
+.access-modal {
+width: 398px;
+margin: 0;}
+
+.access .access-modal {
+margin: 18px auto;}
+
+.access-modal p {
+margin: 12px 18px 3px;}
+
+.access-modal .checkbox-label {
+margin-bottom: 3px;}
+
+.access-modal .button-strip {
+padding-top: 9px;
+margin-bottom: 0;}
+
+.access-modal .button-strip li {
+margin: 6px;}
+
+.forgot-password {
+position: absolute;
+right: -10px;
+top: 6px;}
+
+#page.access .validation-msg {
+bottom: 3px;
+right: -266px;}
+
+#page.access .checkbox-label .validation-msg {
+bottom: -13px;}
+
+#signin-modal {
+width: 400px;
+height: auto;
+min-height: 200px;}
+
+/* ------------------------------------------------------------------------- */
+/* ARTIST PAGE
+/* ------------------------------------------------------------------------- */
+.artist .static-carousel {
+margin-top: 18px;}
+
+.artist-list {
+margin-top: 6px;}
+
+.artist-list li {
+width: 54px;
+height: 96px;
+margin: 0 10px 3px;
+overflow: hidden;}
+
+.artist-list img {
+padding: 2px;
+margin-bottom: 6px;
+display: block;}
+
+.tag-list dt {
+float: none;}
+
+.tag-list dd {
+display: block;
+margin-bottom: 9px;}
+
+.profile-image {
+display: block;
+margin: 18px auto;}
+
+.thin-col .profile-image {
+position: relative;
+right: 4px;}
+
+#catalogue table {
+margin-top: 0;}
+
+.tabbedcontent {
+display: none;}
+
+#catalogue .current {
+display: block;}
+
+.productlist img {
+display: block;
+padding: 2px;
+margin: 3px 0;}
+
+.productlist .releasetype {
+float: left;}
+
+.search-result {
+display: block;}
+
+.productlist .packshot {
+height: 59px;
+width: 60px;}
+
+.productlist .trackart {
+width: 50px;
+vertical-align: top;}
+
+.productlist .packshot-link {
+width: 54px;}
+
+.artist-image .play-all {
+right: auto;
+left: 10px;}
+
+.next-page {
+margin-top: 0;
+padding: 9px;
+display: block;}
+
+/* ------------------------------------------------------------------------- */
+/* SEARCH
+/* ------------------------------------------------------------------------- */
+.search-form {
+margin: 0 auto 18px;}
+
+.search-form .cta {
+position: relative;
+top: 3px;}
+
+.search-form .cta:active {
+top: 4px;}
+
+.search .search-form {
+margin: 18px auto;}
+
+.search-form label,
+.search-form label input,
+.search-form button {
+float: none;
+display: inline;}
+
+.search-form button {
+margin-left: 3px;}
+
+.search .unitx2 h3 {
+margin: 4px 0;}
+
+/* ------------------------------------------------------------------------- */
+/* TERMS / PRIVACY
+/* ------------------------------------------------------------------------- */
+#terms-content {
+height: 460px;
+padding: 10px;
+overflow: auto;}
+
+/* ------------------------------------------------------------------------- */
+/* ACCOUNT
+/* ------------------------------------------------------------------------- */
+.account .focus-text {
+margin: 9px 0 6px;}
+
+#stored-payment-methods small {
+vertical-align: text-bottom;}
+
+#stored-payment-methods strong {
+display: block;
+margin-bottom: 0;}
+
+.account .add-card {
+margin-top: 9px;
+padding-bottom: 0;}
+
+.add-card .credit-card {
+margin-left: 0;}
+
+/* ------------------------------------------------------------------------- */
+/* STOREFRONT
+/* ------------------------------------------------------------------------- */
+.storefront .page-separator {
+z-index: 2;}
+
+.storefront-intro {
+padding-top: 36px;}
+
+.storefront-intro h1,
+.storefront-intro h2 {
+margin: 0;
+padding: 0;}
+
+.storefront-intro h2 {
+margin-bottom: 54px;
+padding-left: 0.75em;}
+
+.storefront-intro p {
+color: #7a7a7a;}
+
+/* Feature Carousel */
+.storefront .page-separator {
+margin-bottom: -7px;}
+
+.storefront .feature-carousel-tabs {
+display: table;
+width: 100%;}
+
+.feature-carousel-tabs li {
+width: 25%;
+display: table-cell;
+position: relative;}
+
+.feature-carousel-tabs span {
+display: block;
+text-decoration: none;
+line-height: 18px;
+padding: 14px 9px;
+margin: 0;
+position: relative;}
+
+.feature-carousel-tabs a {
+margin: 0;
+position: relative;
+display: block;}
+
+.feature-carousel-tabs .active span:after {
+content: "";
+position: absolute;
+bottom: -18px;
+left: 50%;
+margin-left: -9px;}
+
+.feature-carousel-tabs .active {
+z-index: 1;}
+
+.feature-carousel-tabs .active a:after,
+.feature-carousel-tabs .active a:before {
+content: "";
+z-index: -1;
+bottom: 2px;
+left: 4px;
+width: 10%;
+height: 75%;
+position: absolute;}
+
+.feature-carousel-tabs .active a:after {
+right: 3px;
+left: auto;}
+
+/* ------------------------------------------------------------------------- */
+/* YOUR MUSIC
+/* ------------------------------------------------------------------------- */
+.downloads-summary {
+margin: 9px 0;}
+
+.downloads-summary li {
+margin: 0 3px;}
+
+/* ------------------------------------------------------------------------- */
+/* USABILLA WIDGET (TEMPORARY)
+/* ------------------------------------------------------------------------- */
+#ub {
+position: fixed;
+bottom: 30px;
+right: 30px;
+width: 270px;
+z-index: 99;}
+
+#u_close {
+position: absolute;
+top: 0;
+right: 6px;
+color: #444;
+text-decoration: none;
+font-weight: bold;}
+
+#u_widget {
+position: static !important;
+right: 30px !important;
+bottom: 30px !important;
+z-index: 99;
+padding: 15px !important;}
+
+.u_cta {
+float: none !important;}
+
+.u_cta a {
+-moz-border-radius: 3px !important;
+border-radius: 3px !important;}

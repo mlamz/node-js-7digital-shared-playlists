@@ -1,0 +1,735 @@
+﻿/*
+ * Base Form Styles for 7digital.com
+ * (c) 7digital.com
+ */
+ 
+/* ------------------------------------------------------------------------- */
+/* FORMS > BASE ELEMENTS
+/* ------------------------------------------------------------------------- */
+fieldset label {
+position: relative;}
+
+fieldset input[type="text"],
+fieldset input[type="password"],
+fieldset input[type="select"],
+fieldset input[type="search"],
+fieldset input[type="email"],
+fieldset input[type="date"],
+fieldset select {
+padding: 3px;
+color: #7a7a7a;
+border: 1px solid #dddcd5;
+border-top-color: #bbbab3;
+display: block;
+margin-top: 3px;
+background-color: #FAF9F2;
+-moz-box-shadow: inset 0 1px 3px rgba(204, 203, 196, .4);
+-webkit-box-shadow: inset 0 1px 3px rgba(204, 203, 196, .4);
+box-shadow: inset 0 1px 3px rgba(204, 203, 196, .6);
+background: #fafafa url(~/static/graphics/forms/input-alt.png) no-repeat 50% top;
+width: auto;}
+
+input[type="search"] {
+-webkit-appearance: textfield;}
+
+fieldset input[type="file"] {
+border: none;}
+
+fieldset input[disabled="disabled"],
+fieldset select[disabled="disabled"],
+fieldset textarea[disabled="disabled"] {
+background-image: none;
+background-color: #e9e9e9;
+color: #bbb;
+cursor: not-allowed;}
+
+fieldset input:focus,
+fieldset select:focus,
+fieldset textarea:focus {
+color: #333;
+background-color: #ffd;}
+
+fieldset select {
+display: block;
+margin-top: 3px;
+margin-bottom: 0;
+padding: 0;}
+
+fieldset option {
+padding: 1px 6px }
+
+input.checkbox,
+input[type="checkbox"] {
+cursor: pointer;
+position: relative;
+top: 3px;}
+
+.checkbox-label {
+top: 3px;
+cursor: pointer;}
+
+.radio-label {
+color: #7a7a7a;}
+
+.radio-selected {
+color: #333;}
+
+.radio-label input {
+position: relative;
+top: 2px;
+cursor: pointer;}
+
+.radio-label input:active,
+.radio-label input:focus {
+background: none;}
+
+.fake-legend,
+legend {
+width: 100%;
+margin: 0 0 9px;
+padding: 9px 0;
+display: block;
+border-bottom: 1px dotted #cccbc4;
+letter-spacing: normal;
+word-spacing: normal;
+font-weight: bold;
+top: 5px;
+text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);}
+
+/* ------------------------------------------------------------------------- */
+/* FORMS > TEXTAREA DIMENSIONS
+/* ------------------------------------------------------------------------- */
+fieldset textarea {
+border: solid 1px #ccc;
+height: 16px;
+padding: 0 2px;
+display: block;
+line-height: 18px;
+margin-top: 3px;}
+
+.unitx1 textarea { 
+width: 102px;}
+
+.unitx2 textarea { 
+width: 228px;}
+
+.unitx3 textarea { 
+width: 354px;}
+
+.unitx4 textarea { 
+width: 480px;}
+
+.unitx5 textarea { 
+width: 606px;}
+
+.unitx6 textarea { 
+width: 732px;}
+
+.unitx7 textarea { 
+width: 858px;}
+
+.unitx8 textarea { 
+width: 984px;}
+
+.multilinex2 textarea {
+height: 36px;}
+
+.multilinex3 textarea {
+height: 54px;}
+
+.multilinex4 textarea {
+height: 72px;}
+
+.multilinex5 textarea {
+height: 90px;}
+
+.multilinex6 textarea {
+height: 108px;}
+
+/* ------------------------------------------------------------------------- */
+/* FORMS > LARGE FIELDS
+/* ------------------------------------------------------------------------- */
+label.width2.focus-text {
+width: 488px;}
+
+/* ------------------------------------------------------------------------- */
+/* FORMS > UNIQUE ELEMENTS
+/* ------------------------------------------------------------------------- */
+.date-input span {
+display: block;}
+
+.date-input label {
+float: left;
+width: auto;}
+
+.date-input .cc-month {
+margin-right: 3px;}
+
+.date-input .date-label {
+display: none;}
+
+.date-input .small {
+display: block;
+position: relative;
+bottom: 12px;
+clear: both;}
+
+fieldset .date-input .has-error .validation-msg {
+top: 24px;
+bottom: auto;}
+
+.date-input select {
+display: inline;}
+
+fieldset select.cc-month {
+width: 3em;}
+
+fieldset select.cc-year {
+width: 4.5em;}
+
+h4 input[type="checkbox"] {
+margin-right: 0;}
+
+h4 label {
+position: relative;
+top: 1px;
+margin-bottom: 0;}
+
+label.singleline {
+float: left;
+clear: left;
+height: 32px;
+margin-bottom: 0;}
+
+.singleline input { 
+width: auto;
+display: inline;
+margin-top: 0;}
+
+.singleline span {
+text-align: right;}
+
+.pagesize-selector {
+margin: 6px 0 0;}
+
+.pagesize-selector span {
+position: relative;
+top: 1px;}
+
+.pagesize-selector select {
+margin: 0 0 0 6px;}
+
+.pagesize-selector button {
+display: none;
+margin-left: 6px;}
+
+/* ------------------------------------------------------------------------- */
+/* FORMS > SECTIONS
+/* ------------------------------------------------------------------------- */
+.form-section {
+margin-bottom: 9px;
+border: 1px solid #dddcd5;
+border-bottom-color: #cccbc4;
+background-color: #fefefe;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+clear: both;}
+
+.form-section fieldset {
+margin: 9px 18px 18px;}
+
+.form-section h1,
+.form-section h2,
+.form-section h3,
+.form-section h4 {
+margin: 9px 18px;}
+
+form h3 {
+margin-bottom: 18px;}
+
+form h3,
+form h4 {
+font-weight: normal;
+letter-spacing: 0;}	
+
+.optional-step {
+background-color: #fcfcfc;}
+
+.optional-step .toggler {
+margin-bottom: 18px;}
+
+.toggler label {
+cursor: pointer;}
+
+.form-help {
+color: #7a7a7a;
+float: right;
+width: 200px}
+
+.form-help p {
+margin: 0;}
+
+label .help {
+float: right;}
+
+/* ------------------------------------------------------------------------- */
+/* BUTTON STRIPS
+/* ------------------------------------------------------------------------- */
+button,
+.btn,
+.preview {
+display: inline-block;
+padding: 4px 10px;
+text-transform: lowercase;
+font-size: 11px;
+text-decoration: none;
+letter-spacing: .05em;
+font-weight: bold;
+color: #fff;
+border: none;
+background-color: #2891C9;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+-moz-box-shadow: 0 1px 0 rgba(50, 50, 50, 0.3);
+-webkit-box-shadow: 0 1px 0 rgba(50, 50, 50, 0.3);
+box-shadow: 0 1px 0 rgba(50, 50, 50, 0.3);
+position: relative;
+cursor: pointer;
+background-color: #2780af;
+background-image: url(~/static/graphics/forms/button-overlay.png);
+background-image: -moz-linear-gradient(top, #74ADCC 0%, #2780af 100%);
+background-image: -webkit-gradient(linear, left top, left bottom, from(#74ADCC), to(#2780af));
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+-webkit-background-clip: padding-box;
+-moz-background-clip: padding-box;}
+
+button.destructive {
+background-color: #b81111;
+background-image: url(~/static/graphics/forms/button-overlay.png);
+background-image: -moz-linear-gradient(top, #BD5C5C 0%, #b81111 100%);
+background-image: -webkit-gradient(linear, left top, left bottom, from(#BD5C5C), to(#b81111));}
+
+a.destructive {
+font-weight: bold;
+color: #b81111;}
+
+.btn {
+padding: 3px 10px}
+
+button.disabled,
+button.disabled:hover,
+button[disabled],
+button[disabled]:hover,
+.free-item button.disabled {
+background-color: #aaa;
+visibility: visible;
+cursor: default;}
+
+button:hover,
+.btn:hover {
+background-color: #333;
+background-image: -moz-linear-gradient(top, #7c7c7c 0%, #333333 100%);
+background-image: -webkit-gradient(linear, left top, left bottom, from(#7c7c7c), to(#333333));}
+
+.btn:active,
+button:active {
+position: relative;
+top: 1px;}
+
+button.disabled:active,
+button[disabled]:active,
+.add-success {
+top: 0;
+left: 0;}
+
+.btn,
+.btn:hover,
+.btn:active {
+color: #fff;}
+
+button.cta,
+a.cta {
+-moz-box-shadow: 0 1px 0 rgba(50, 50, 50, 0.3), 0 0 1px rgba(0, 0, 0, 0.4) inset;
+-webkit-box-shadow: 0 1px 0 rgba(50, 50, 50, 0.3), 0 0 1px rgba(0, 0, 0, 0.4) inset;
+box-shadow: 0 1px 0 rgba(50, 50, 50,0.3), 0 0 1px rgba(0, 0, 0, 0.4) inset;
+border: 1px solid #fff;
+font-size: 16px;}
+
+a.cta {
+font-size: 14px;}
+
+.loading-button,
+.loading-button:hover {
+background: #aaa url(~/static/graphics/loaders/aaaaaa-small.gif) no-repeat 50% !important;}
+
+.loading-button span {
+visibility: hidden;}
+
+.button-strip li {
+margin: 0 6px;
+float: left;}
+
+.button-strip .initial-button {
+margin-left: 0;}
+
+fieldset .button-strip {
+overflow: hidden;
+margin-top: 9px;}
+
+.single-line + .button-strip {
+margin: 0;}
+
+.centred-button li {
+float: none;
+text-align: center;}
+
+.or,
+.button-strip button,
+.button-strip a {
+vertical-align: middle;}
+
+.or {
+font-size: 11px;
+margin: 0 3px 0 0;}
+
+.download-button {
+display: inline-block;
+padding-left: 20px;
+position: relative;}
+
+.download-button:before {
+content: '';
+background: url(~/static/graphics/icons/download-icon.png) no-repeat 0 0;
+display: block;
+height: 12px;
+width: 12px;
+position: absolute;
+top: 50%;
+left: 6px;
+margin-top: -6px;}
+ 
+.form-separator {
+margin-top: 9px;}
+
+/* ------------------------------------------------------------------------- */
+/* FEEDBACK
+/* ------------------------------------------------------------------------- */
+.feedback {
+border: 1px solid #cccbc4;
+background: #eeede6;
+clear: both;
+position: relative;
+margin: 18px 3px;
+color: #7a7a7a;
+opacity: .9;
+margin-left: -1px;
+text-align: center;
+padding: 9px;}
+
+form .feedback,
+.notice {
+margin: 9px 0;}
+
+.notice {
+color: #b81111;
+font-weight: bold;}
+
+.feedback span {
+line-height: 1.2;
+padding: 2px 20px;
+background-position: 0 0;
+background-repeat: no-repeat;
+font-weight: bold;}
+
+.warning {
+border-color: #b1a54f;
+background-color: #f1e06c;}
+
+.warning span {
+color: #716933; 
+background-image: url(~/static/graphics/icons/exclamation-diamond.png);
+text-align: left;}
+
+.success {
+border-color: #0a6114;
+background-color: #10a121;}
+
+.success span {
+color: #fff;
+background-image: url(~/static/graphics/icons/tick-circle-frame.png);
+text-align: left;}
+
+.success a {
+color: #fff;}
+
+.error,
+fieldset .validation-msg {
+border-color: #aaa9a1;
+background-color: #b81111;
+color: #fff;
+text-shadow: none;}
+
+.error span {
+background-image: url(~/static/graphics/icons/exclamation-red-frame.png);}
+
+.information,
+.tooltip {
+border-color: #32628F;
+background-color: #488ECF;
+color: #fff;}
+
+.form-help .information {
+background: none;}
+
+.information a:link,
+.information a:visited,
+.information a:hover,
+.information a:active {
+color: #fff;}
+
+.information span {
+background-image: url(~/static/graphics/icons/information-frame.png);}
+
+.dismiss {
+right: -1px;
+top: 0;
+display: block;
+position: absolute;
+height: 20px;
+width: 20px;
+text-indent: -999em;
+background: url(~/static/graphics/icons/cross-white.png) no-repeat 50%;
+text-decoration: none;}
+
+.feedback a {
+color: #fff;}
+
+.feedback a:hover {
+color: #ccc;}
+
+.loading span {
+background-image: url(~/static/graphics/loaders/7a7a7a-fff-small.gif);}
+
+/* Error Indicators */
+fieldset .has-error input,
+fieldset .has-error select,
+fieldset .has-error textarea {
+background: #ffc;
+color: #a50000;
+border-color: #a50000 #c90000 #c90000 #a50000;}
+
+fieldset .validation-msg {
+cursor: pointer;
+display: none;}
+
+.has-error .validation-msg {
+display: block;
+position: absolute;
+width: 220px;
+right: -266px;
+margin-top: -24px;
+bottom: -1px;}
+
+.unitx1.has-error .validation-msg {
+right: -260px;}
+
+.has-error .validation-msg,
+.tooltip {
+font-size: 11px;
+padding: 3px 16px 3px 6px;
+text-align: left;
+font-weight: bold;
+border: 1px solid #bbbab3;
+z-index: 96;
+opacity: .95;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+-moz-box-shadow: 0 1px 2px rgba(82, 82, 82, 0.5);
+-webkit-box-shadow: 0 1px 2px rgba(82, 82, 82, 0.6);
+box-shadow: 0 1px 2px rgba(82, 82, 82, 0.5);}
+
+fieldset .validation-msg .arrow,
+.tooltip span {
+position: absolute;
+font-size: 0;}
+
+fieldset .validation-msg .arrow {
+left: -11px;
+top: 50%;
+margin-top: -8px;
+border-top: 8px solid transparent;
+border-bottom: 8px solid transparent;
+border-right: 10px solid #bbbab3;
+border-left: none;}
+
+.tooltip {
+white-space: normal;
+margin: 0 3px 0 0;
+border-color: #fff;}
+
+.tooltip span {
+border-right-color: #fff;}
+
+fieldset .message-left .arrow {
+right: -11px;
+left: auto;
+border-right: none;
+border-left: 10px solid #eee;}
+
+fieldset .message-left .validation-msg {
+right: auto;
+left: -252px;}
+
+fieldset .first.message-left .validation-msg {
+left: -242px;}
+
+fieldset .validation-msg .close {
+font-size: 9px;
+position: absolute;
+top: -1px;
+right: 3px;}
+
+/* ------------------------------------------------------------------------- */
+/* TOOLTIP SPECIFIC
+/* ------------------------------------------------------------------------- */
+.tooltip span {
+border: 8px solid #ccc;}
+
+.topcenter span {
+border-color: #ddd transparent transparent transparent;
+bottom: -17px;
+left: 50%;
+margin-left: -8px;}
+
+.centerleft span {
+border-color: transparent  transparent transparent #ccc;
+margin-top: -8px;
+top: 50%;
+right: -17px;}
+
+.centerright span {
+border-color: transparent #ccc transparent transparent;
+margin-top: -8px;
+top: 50%;
+left: -17px;}
+
+/* ------------------------------------------------------------------------- */
+/* DATE INPUT / CALENDAR PICKER
+/* ------------------------------------------------------------------------- */
+input.date-input {
+text-align: center;}
+
+.caltrigger {
+width: 16px;
+height: 16px;
+float: left;
+background: red;}
+
+#calroot {
+z-index: 97;
+width: 198px;
+padding: 3px;
+background-color: #fefefe;
+font-size: 11px;
+border: 1px solid #bbbab3;
+border-bottom-color: #999891;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+-moz-box-shadow: 0 2px 3px rgba(204, 203, 196, .8);
+-webkit-box-shadow: 0 2px 3px rgba(204, 203, 196, .8);
+box-shadow: 0 2px 3px rgba(204, 203, 196, .8);}
+
+#calhead {
+padding: 3px 0;
+height: 22px;}
+
+#caltitle {
+font-size: 14px;
+float: left;
+text-align: center;
+width: 155px;
+line-height: 20px;}
+
+#calnext, #calprev {
+display: block;
+width: 20px;
+height: 20px;
+float: left;
+cursor: pointer;
+text-align: center;}
+
+#calbody {
+clear: both;}
+
+#calnext {
+float: right;}
+
+#calprev.caldisabled, #calnext.caldisabled {
+visibility: hidden;}
+
+#caldays {
+height: 21px;
+border-bottom: 1px solid #cccbc4;}
+
+#caldays span {
+display: block;
+float: left;
+width: 28px;
+text-align: center;}
+
+/* container for weeks */
+#calweeks {
+background-color: #fff;
+margin-top: 4px;}
+
+/* single week */
+.calweek {
+clear: left;
+height: 22px;}
+
+/* single day */
+.calweek a {
+display: block;
+float: left;
+width: 27px;
+height: 20px;
+text-decoration: none;
+font-size: 11px;
+margin-left: 1px;
+text-align: center;
+line-height: 20px;
+color: #666;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;}
+
+/* different states */
+.calweek a:hover, .calfocus {
+background-color: #dddcd5;}
+
+/* unselecteble day */
+a.caldisabled {
+background-color: #efefef !important;
+color: #ccc !important;
+cursor: default;}
+
+/* current day */
+#calcurrent {
+background-color: #2891C9;
+color: #fff;}
+
+/* today */
+#caltoday {
+background-color: #555;
+color: #fff;}
+
+/* offmonth day */
+a.caloff {
+color: #ccc;}
+
+a.caloff:hover {
+background-color: #fcfcfc;}

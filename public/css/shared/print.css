@@ -1,0 +1,70 @@
+﻿/*
+* Print Optimisations for 7digital.com
+* Inspired by html5boilerplate.com
+* (c) 7digital.com
+*/
+
+@media print {
+	* {
+	background: transparent !important;
+	color: #444 !important;
+	text-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;}
+
+	*:after,
+	*:before {
+	display: none;}
+
+	a, 
+	a:visited {
+	color: #444 !important;
+	text-decoration: underline;}
+
+	abbr:after {
+	content: " (" attr(title) ")";}
+
+	pre, blockquote {
+	border: 1px solid #999;
+	page-break-inside: avoid;}
+
+	thead {
+	display: table-header-group;}
+
+	/* css-discuss.incutio.com/wiki/Printing_Tables */
+	tr, img {
+	page-break-inside: avoid;}
+
+	p, h2, h3 {
+	orphans: 3;
+	widows: 3;}
+
+	h2, h3 {
+	page-break-after: avoid;}
+
+	/* 7digital.com elements */
+	#logo a {
+	position: static;
+	width: auto;
+	text-indent: 0 !important;}
+
+	#header {
+	margin-bottom: 9px;
+	overflow: hidden;
+	position: static;
+	border: none;}
+
+	#header li {
+	border: none;}
+
+	#page {
+	padding-top: 0;}
+
+	#footer,
+	#player-container {
+	display: none;}
+
+	.icon {
+	padding-left: 0;}
+}

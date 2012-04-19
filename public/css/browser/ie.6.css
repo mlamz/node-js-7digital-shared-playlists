@@ -1,0 +1,174 @@
+﻿/*
+ * IE6 Workounds, Fixes and Hacks for 7digital.com
+ * (c) 7digital.com
+ */
+ 
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > BASE ELEMENTS
+/* ------------------------------------------------------------------------- */
+body {
+background-image: none;}
+
+#page {
+padding-top: 0;}
+
+#header {
+overflow: auto;
+z-index: 999;
+padding: 0;}
+
+#user-tools label {
+width: auto;
+margin: 0;}
+
+#user-tools input {
+margin-top: -15px;}
+
+#user-tools ul {
+float: left;}
+
+#user-tools a {
+padding-left: 0;
+background-image: none;}
+
+#user-tools form {
+height: 30px;}
+
+#logo {
+position: relative;}
+
+#footer {
+background: #232323;}
+
+#links {
+background: #232323;}
+
+input,
+textarea { 
+background-image: none;}
+
+thead th {
+background-image: none;}
+
+.chrome {
+background: #292829;}
+
+.tabs {
+height: 1%;}
+
+/* DATA URI OVERRIDES */
+#c {
+background-image: url(~/static/graphics/shared/noised.png);}
+
+.vertical .carousel-control {
+background-image: url(~/static/graphics/shared/cccbc4-vertical.png);}
+
+fieldset input[type="text"],
+fieldset input[type="password"],
+fieldset input[type="select"],
+fieldset input[type="search"],
+fieldset input[type="email"],
+fieldset input[type="date"],
+fieldset select {
+background-image: url(~/static/graphics/forms/input-alt.png);}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > BASE ELEMENTS > HEADINGS
+/* ------------------------------------------------------------------------- */
+.sidebar-heading {
+height: 45px;
+background: none;
+color: #111;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > CAROUSELS
+/* ------------------------------------------------------------------------- */
+.carousel-control span {
+top: 106px;}
+
+.vertical .next {
+bottom: auto;
+top: 48px;}
+
+.vertical .pager {
+display: none;}
+
+.fullwidth-carousel {
+width: 966px;
+overflow: hidden !important;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > UI > PLAYER
+/* ------------------------------------------------------------------------- */
+/* Player */ 
+#player-container {
+display: none;}
+
+/* ------------------------------------------------------------------------- */
+/* BUTTON STRIPS
+/* ------------------------------------------------------------------------- */
+button, .btn {
+background-image: none;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > HEADER > BASKET
+/* ------------------------------------------------------------------------- */
+#basket {
+z-index: 999;}
+
+/* ------------------------------------------------------------------------- */
+/* GLOBAL > FOOTER
+/* ------------------------------------------------------------------------- */
+#social-wrapper {
+padding-right: 0;}
+
+.flyout,
+.flyout ul {
+background: #222;}
+
+.flyout li {
+height: 1%;}
+
+.flyout ul .country-code {
+background-position: 0 50%;}
+
+.country-code {
+background-image: none;}
+
+/* ------------------------------------------------------------------------- */
+/* RELEASE PAGE
+/* ------------------------------------------------------------------------- */
+.zoom {
+cursor: url(~/static/graphics/cursors/zoomin.cur), pointer;}
+
+.release-head .thin-col {
+width: 310px;}
+
+.release-info,
+.release-details {
+width: 592px;}
+
+.unit .packshot {
+height: 1%;
+margin-bottom: -3px;}
+
+.trackpreview {
+width: 48px;}
+
+/* ------------------------------------------------------------------------- */
+/* ARTIST PAGE
+/* ------------------------------------------------------------------------- */
+.tag-list,
+.artist-list {
+float: none;
+position: relative;
+height: 1%;}
+
+.artist-list li {
+width: 67px;}
+
+/* ------------------------------------------------------------------------- */
+/* CHECKOUT PAGE
+/* ------------------------------------------------------------------------- */
+#order-summary {
+width: 338px;}
