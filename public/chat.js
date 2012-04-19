@@ -13,6 +13,15 @@ $(document).ready(function(){
 		e.preventDefault();
 		now.distributeMessage($("#text-input").val());
 		$("#text-input").val('');
+	});
+
+	$("#track-search").submit(function(e){
+		e.preventDefault();
+
+		$.post("/trackSearch", { query : "u2" },
+   			function(data) {
+     			console.log(data);
+   			});
 	})
 });
 

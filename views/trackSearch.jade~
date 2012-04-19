@@ -24,4 +24,3 @@ h2 7digital shared playlists built in node.js
 
 .column.width300
 	h4 playlist
-	!=partial('partials/trackSearch')

@@ -1,5 +1,6 @@
 var express = require('express'),
-    homeController = require('./controllers/homeController')
+    homeController = require('./controllers/homeController'),
+    trackSearchController = require('./controllers/trackSearchController')
     nowjs = require('now'),
     port = 3000;
 
@@ -20,8 +21,13 @@ app.configure('development', function(){
 
 
 app.get('/', function(request, response){
-    console.log("loading home");
+    console.log("home");
     homeController.index(request, response);
+});
+
+app.post('/trackSearch', function(request, response){
+    console.log("track search");
+    trackSearchController.index(request, response);
 });
 
 
