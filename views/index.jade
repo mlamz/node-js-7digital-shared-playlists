@@ -1,8 +1,26 @@
-h1 7digital shared playlists built in node.js
+h2 7digital shared playlists built in node.js
 
-h3 Stream 7digital tunes with your friends
+.first.column.width300
+	h4 user chat
+	
+	form#chat-form
+		span.first.column
+			input#text-input(type='text', style='width:200px;margin-right:5px;margin-top:5px')
+		span.column
+		input#send-button(type='submit', value='chat')
+	p#welcome-message.small
+	p#messages.small
 
-div#messages
-form#chat-form
-	input#text-input(type='text')
-	input#send-button(type='submit', value='chat')
+.column.width300
+	h4 track search
+
+	form#track-search
+		span.first.column
+			input#track-search-query(type='text', style='width:200px;margin-right:5px;margin-top:5px')
+		span.column
+		input#track-search-submit(type='submit', value='search')
+
+
+
+.column.width300
+	h4 playlist

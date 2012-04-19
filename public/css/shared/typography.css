@@ -48,14 +48,17 @@ letter-spacing: -.025em;}
 
 h1, h2, h3, h4, .heading {
 margin-top: 9px; 
-font-family: 'Century Old Style Std', 'Century Schoolbook', Georgia, serif;}
+font-family: 'Century Old Style Std', 'Century Schoolbook', Georgia, serif;
+}
 
 h1 {
 padding-bottom: 9px;
 margin: 0 0 9px;}
 
 h2 {
-font-size: 1.7em;}
+font-size: 1.7em;
+margin-left: 7px;
+}
 
 h3,
 form h2 {
@@ -95,7 +98,7 @@ text-align: center;}
 text-align: right;}
 
 .small {
-font-size: 10px;}
+font-size: 11px;}
 
 .lc {
 text-transform: lowercase;}

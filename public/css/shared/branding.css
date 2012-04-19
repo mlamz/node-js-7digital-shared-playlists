@@ -417,7 +417,7 @@ background-image: url(~/static/graphics/flags/gb.png);}
 background-image: url(~/static/graphics/flags/us.png);}
 
 .small {
-color: #999;}
+color: #333333;}
 
 /* 24px Flags */ 
 #country-select-header .large-flag {
