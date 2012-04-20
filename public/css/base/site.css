@@ -1,7 +1,9 @@
+
 body div
 {
-	padding: 10px;
+	padding: 2px;
 }
+
 .functionalpart-box
 {
 	border: 1px solid #7a7a7a;
@@ -37,4 +39,23 @@ body div
 .basket
 {
 	margin-left:19px;
+}
+.search-result
+{
+	margin-left:-2px;
+	background-color: #efefef;
+	border: solid 1px #cccccc;
+	height: 60px;
+	margin-bottom: 2px;
+	width: 308px;
+}
+
+.search-result span
+{
+	padding-top: 10px;
+}
+
+#track-search-query
+{
+	width: 250px !important;
 }

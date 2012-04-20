@@ -12,7 +12,8 @@ h2 7digital shared playlists built in node.js
 	p#messages.small
 
 .column.width300
-	h4 track search
+	h4 search for a track 
+
 
 	form#track-search(method='post',action='/trackSearch')
 		span.first.column
@@ -20,8 +21,11 @@ h2 7digital shared playlists built in node.js
 		span.column
 		input#track-search-submit(type='submit', value='search')
 
+	p.small (then drag it onto the playlist)
+
+	div#searchResults
+
 
 
 .column.width300
 	h4 playlist
-	!=partial('partials/trackSearch')

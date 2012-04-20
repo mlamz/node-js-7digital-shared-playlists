@@ -14,15 +14,5 @@ $(document).ready(function(){
 		now.distributeMessage($("#text-input").val());
 		$("#text-input").val('');
 	});
-
-	$("#track-search").submit(function(e){
-		e.preventDefault();
-
-		$.post("/trackSearch", { query : $("#track-search-query").val() },
-   			function(data) {
-   				console.log("search results: ");
-     			console.log(data);
-   			});
-	})
 });
 
