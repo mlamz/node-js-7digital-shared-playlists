@@ -95,3 +95,8 @@ body div
 	width: 308px;
 	border: dotted 3px #333333;
 }
+#music-player
+{
+	width: 300px;
+	height: 100px;
+}

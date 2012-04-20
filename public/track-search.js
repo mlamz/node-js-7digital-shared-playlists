@@ -20,7 +20,7 @@ $(document).ready(function(){
             revert: "invalid", 
             snap: "#shared-playlist", 
             snapMode: "inner", 
-            snapTolerance: "200", 
+            snapTolerance: "100", 
             connectToSortable: "#sortable",
             helper: "clone",
           });
@@ -33,9 +33,11 @@ $(document).ready(function(){
       			activeClass: "shared-playlist-hover",
       			hoverClass: "shared-playlist-active",
       			drop: function( event, ui ) {
+
               reorderPlayList();
-              console.log(event.srcElement);
-              playTrack(1654269, 18100655);
+              var trackid = getTrackId();
+              playTrack(trackid);
+              
       			}
 		      });
 
@@ -49,8 +51,6 @@ $(document).ready(function(){
    		
    		function buildSearchResultHtml(image, artist, track, isLast, isRepeatedTrack, releaseId, trackId){
    			var html = "";
-
-        console.log(track, "is last" + isLast, "is repeat" + isRepeatedTrack);
 
         if(!isRepeatedTrack){
           html = "<li class='search-result ui-widget-content playlist-spot-container' data-releaseid='"+releaseId+"' data-trackid='"+trackId+"'>"
@@ -74,20 +74,37 @@ $(document).ready(function(){
           $("ul#sortable").append('<li class="playlist-spot ui-state-disabled"></li>');
           $("ul#sortable").append('<li class="playlist-spot ui-state-disabled"></li>');
       };
+      var trackCurrentlyPlaying;
+      function playTrack(trackid){
+        
+        if (!trackCurrentlyPlaying){
 
-      function playTrack(releaseid, trackid){
-        if ($("#music-player").html() == ''){
-
-         
-
-        //var stream = "http://stream.geo.7digital.com/media/track/stream?releaseId=1355281&trackId=14973142&userId=0&country=GB&oauth_consumer_key=7dymqpkpnh9a&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1334932090&oauth_nonce=VdrguYG8y5pp2BQlCyDFYNMCU05s6ipgqW40P3GYN8E&oauth_version=1.0&oauth_signature=rwNCYFVjH54y3aGYCmT7LgVX%2FUQ%3D";
-        var stream = "http://stream.geo.7digital.com/media/track/stream?formatid=26&oauth_consumer_key=7digital.com&oauth_nonce=1785104161&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1334937170&releaseid="+releaseid+"&trackid="+trackid+"&userid=3918918&oauth_signature=UZATvlezdsnOvsm4vETdC2th9WE%3D"
-       // $("#music-player").append('<embed height="50px" width="100px" src="' + stream + '"></embed>');
-        //$("#music-player").append('<audio><source src="http://stream.geo.7digital.com/media/track/stream?releaseId=1355281&trackId=14973142&userId=0&country=GB&oauth_consumer_key=7dymqpkpnh9a&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1334932090&oauth_nonce=VdrguYG8y5pp2BQlCyDFYNMCU05s6ipgqW40P3GYN8E&oauth_version=1.0&oauth_signature=rwNCYFVjH54y3aGYCmT7LgVX%2FUQ%3D" type="audio/mp3" /></audio>');
-            $("#music-player").append('<audio width="50px" autoplay="autoplay" src="' + stream + '" controls preload="auto" autobuffer></audio>');
-            $("#music-player").hide();
-           // $("#music-player").append('<audio src="'+stream+'" preload="auto" />');
+          trackCurrentlyPlaying = true;
+          var stream = "http://previews.7digital.com/clips/34/"+trackid+".clip.mp3";
+          $('#audio-stream').attr('src', stream);
+          var a = audiojs.createAll({
+            trackEnded: function() {
+              console.log("track ended, removing trackid " + trackid);
+              $("#sortable li.search-result[data-trackid="+ trackid +"]").remove();
+                //trackCurrentlyPlaying = false;
+                console.log("removed...")
+                var trackid = playNextTrack();
+                //if(trackid){
+                //trackCurrentlyPlaying = true;
+                }
+            }
+          );
+         // $("#music-player").hide();  
         }
+      }
+           
+        
+      
+
+      function getTrackId(){
+        var trackid = $('#sortable').find('li.search-result[data-trackid]').attr("data-trackid");
+        console.log(trackid);
+        return trackid;
       }
 
  		})
