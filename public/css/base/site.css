@@ -65,36 +65,6 @@ body div
 	min-height: 500px;
 	border: solid 1px #cccccc;
 }
-.playlist-spot-container
-{
-	margin-left:1px;
-}
-.shared-playlist-hover
-{
-	background-color: #cccccc;
-}
-.shared-playlist-active
-{
-	background-color: #aaaaaa;
-}
-.playlist-spot
-{
-	height: 60px;
-	margin-bottom: 10px;
-	width: 308px;
-}
-.playlist-spot-bottom
-{
-	height: 10px;
-	margin-bottom: 0px;
-	width: 308px;
-}
-.placeholder-highlight
-{
-	height: 60px;
-	width: 308px;
-	border: dotted 3px #333333;
-}
 #music-player
 {
 	width: 300px;
