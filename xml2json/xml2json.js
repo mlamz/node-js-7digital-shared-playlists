@@ -1,4 +1,5 @@
-var request = require('request'), expat = require('node-expat'), fs = require('fs');
+var expat = require('node-expat');
+var fs = require('fs');
 
 // This object will hold the final result.
 var obj = currentObject = {};
@@ -58,7 +59,9 @@ function endElement(name) {
     currentObject = ancestor;
 }
 
-function xml2JsonParser(xml, _options) {
+module.exports = {
+
+    parser: function parser(xml, _options) {
         var parser = new expat.Parser('UTF-8');
 
         parser.on('startElement', startElement);
@@ -88,22 +91,5 @@ function xml2JsonParser(xml, _options) {
 
         return JSON.stringify(obj);
     }
+};
 
-
-
-
-module.exports = 
-{
-    index : function index(req, res){
-        var searchQuery = req.body.query, 
-        trackSearchEndpoint = "http://api.7digital.com/1.2/track/search/?q=" + searchQuery + "&oauth_consumer_key=YOUR_KEY_HERE";
-
-        request(trackSearchEndpoint, function (error, response, body) {
-	  		var parsedBody, json;
-	  		if (!error && response.statusCode == 200) {
-				json = xml2JsonParser(body);
-		    	res.send(json);
-		    }
-	  	})
-    }
-}

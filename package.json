@@ -6,6 +6,7 @@
     "jade" : "",
     "now" : "",
     "node-proxy" : "",
-    "request" : ""
+    "request" : "",
+    "node-expat" : "git://github.com/astro/node-expat.git"
   }
 }
