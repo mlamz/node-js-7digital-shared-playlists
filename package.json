@@ -4,6 +4,8 @@
   "dependencies" : {
     "express" : "2.5.8",
     "jade" : "",
-    "now" : ""
+    "now" : "",
+    "node-proxy" : "",
+    "request" : ""
   }
 }
