@@ -56,6 +56,20 @@ everyone.now.distributeNewUser = function(str){
     everyone.now.receiveNewUser(str);
 }
 
+everyone.disconnected(function(){
+    everyone.now.receiveUserLeftMessage(this.now.name);
+    var user = User.findOne({ name : this.now.name }, function (err, user) {
+        console.log("users found in mongo: ", user);
+        user.remove();
+    });
+    
+    console.log(this.now.name + " has left.");
+});
+
+everyone.connected(function(){
+  //  everyone.now.receiveUserJoinedMessage(this.now.name);
+    console.log(this.now.name + " has joined.");
+});
 
 
 app.listen(port);

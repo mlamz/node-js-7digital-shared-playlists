@@ -9,7 +9,7 @@ hr
 h4 connected users
 ul#user-list
 	- for (var i = 0; i < users.length; i++) {
-		li.user-box.small=users[i].name
+		li.user-box.small(data-user=users[i].name)=users[i].name
 	- }
 div.clear
 div#welcome-message
