@@ -46,7 +46,7 @@ word-spacing: .05em;
 margin-bottom: 9px;
 letter-spacing: -.025em;}
 
-h1, h2, h3, h4, .heading {
+h1, h2, h3, h4,h5 .heading {
 margin-top: 9px; 
 font-family: 'Century Old Style Std', 'Century Schoolbook', Georgia, serif;
 }
@@ -77,6 +77,11 @@ margin: 0 0 .25em;}
 h4 {
 margin: 0 0 9px;}
 
+h5 {
+font-size: 1.2em;
+font-style: normal;
+padding-bottom: 6px;
+}
 del {
 font-weight: normal;}
 
