@@ -2,7 +2,11 @@ var express = require('express'),
     homeController = require('./controllers/homeController'),
     trackSearchController = require('./controllers/trackSearchController')
     nowjs = require('now'),
-    port = process.env.PORT || 3000;
+    port = process.env.PORT || 3000,
+    mongoose = require('mongoose'),
+    User = homeController.User;
+
+mongoose.connect('mongodb://'+process.env.MONGOLABS_USER+':'+process.env.MONGOLABS_PASSWORD+'@ds031947.mongolab.com:31947/shared-playlists');
 
 var app = express.createServer();
 
@@ -24,14 +28,12 @@ app.configure('development', function(){
 
 
 app.get('/', function(request, response){
-    console.log("home");
     homeController.index(request, response);
 });
 
 app.post('/trackSearch', function(request, response){
     trackSearchController.index(request, response);
 });
-
 
 everyone.now.distributeMessage = function(str){
     console.log("distributing message");
@@ -46,6 +48,15 @@ everyone.now.distributeRemovalOfFinishedTrack = function(str){
     console.log("removing finished track from shared playlist");
     everyone.now.receiveRemovalOfPlaylistTrack(this.now.name,str);
 }
+
+everyone.now.distributeNewUser = function(str){
+    console.log("distributing new user", str);
+    var user = new User({name: str, joined: new Date()});
+    user.save(function(err) { console.log(err); });
+    everyone.now.receiveNewUser(str);
+}
+
+
 
 app.listen(port);
 

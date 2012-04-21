@@ -24,7 +24,7 @@ $(document).ready(function(){
 
 	$("#track-search").submit(function(e){
 		e.preventDefault();
-		queryParams = { query : $("#track-search-query").val() };
+		var queryParams = { query : $("#track-search-query").val() };
 		$.post("/trackSearch", queryParams,	function(data) {
  			data = JSON.parse(data);
  			$("#searchResults").text('');

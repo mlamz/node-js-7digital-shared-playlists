@@ -1,12 +1,18 @@
 h2 7digital shared playlists built in node.js
 
 
+h5 Add tracks to a shared playlist, for everyone to enjoy!
+
 
 hr
 
-h5 Add tracks to a shared playlist, for everyone to enjoy!
-
-p#welcome-message
+h4 connected users
+ul#user-list
+	- for (var i = 0; i < users.length; i++) {
+		li.user-box.small=users[i].name
+	- }
+div.clear
+div#welcome-message
 
 .first.column
 	h4 user chat
