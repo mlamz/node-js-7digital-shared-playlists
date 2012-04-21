@@ -1,32 +1,27 @@
 $(document).ready(function(){
-	var currentTrackId, playlistTrackIds = [], trackCurrentlyPlaying = false;
+	var playlistTrackIds = [], trackCurrentlyPlaying = false;
+
+  now.receiveNewPlaylistTrack = function(name, track){
+      console.log("receiving track...");
+      $("#sortable").append(track);
+  }
 
 	$("#track-search").submit(function(e){
 		e.preventDefault();
 		queryParams = { query : $("#track-search-query").val() };
 		$.post("/trackSearch", queryParams,	function(data) {
-   			data = JSON.parse(data);
-   			$("#searchResults").text('');
-   			$("#searchResults").append('<ul>');
-     		$.each(data.response.searchResults.searchResult, function(index, searchResult){
-     			var track = searchResult.track,
-                isLast = (index + 1 == data.response.searchResults.searchResult.length),
-                isRepeatedTrack = $("#searchResults").text().indexOf(track.title) !== -1;
-   				$("#searchResults").append(buildSearchResultHtml(track.release.image, track.artist.name, track.title, isLast, isRepeatedTrack, track.id));
-          
-        })
+ 			data = JSON.parse(data);
+ 			$("#searchResults").text('');
+ 			$("#searchResults").append('<ul>');
+   		$.each(data.response.searchResults.searchResult, function(index, searchResult){
+   			var track = searchResult.track,
+            isLast = (index + 1 == data.response.searchResults.searchResult.length),
+            isRepeatedTrack = $("#searchResults").text().indexOf(track.title) !== -1;
 
-        bindSearchResultTriggers();
+ 				$("#searchResults").append(buildSearchResultHtml(track.release.image, track.artist.name, track.title, isLast, isRepeatedTrack, track.id));
         
-          
-        
-
-          $( "#sortable" ).sortable({  
-            revert: true, 
-            cancel: ".ui-state-disabled",
-          });
-
-          $( "ul, li" ).disableSelection();
+      })
+      bindSearchResultTriggers();
  		})
 	})
 
@@ -40,6 +35,8 @@ $(document).ready(function(){
         console.log("track added", trackIdAdded);
         playlistTrackIds.push(trackIdAdded);
         $('#sortable').append(this);
+        //distributeNewPlaylistTrack
+        //now.distributeNewPlaylistTrack(JSON.parse(this));
       }
       console.log("tracks in playlist", playlistTrackIds);
 
@@ -69,19 +66,21 @@ $(document).ready(function(){
           playNextTrack();
         }
      }); 
+      document.getElementById('audio-stream').play();
     }
   }
 
   function buildSearchResultHtml(image, artist, track, isLast, isRepeatedTrack, trackId){
     var html = "";
-
+    artist = artist.length > 12 ? artist.substr(0, 12) + "..." : artist;
+    track = track.length > 25 ? track.substr(0, 25) + "..." : track;
     if(!isRepeatedTrack){
       html = "<li class='search-result ui-widget-content playlist-spot-container' data-trackid='"+trackId+"'>"
       +"<div class='column first'><img src='" + image + "' /></div>"
       +"<div class='column'><span class='small' style='font-size:10px'>"
-      + artist 
+      + artist
       + " - "
-      + track 
+      + track
       + "</span></li>";
     }
     
@@ -91,6 +90,5 @@ $(document).ready(function(){
     
     return html;
   }
-
 })
 

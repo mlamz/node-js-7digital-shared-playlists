@@ -38,6 +38,11 @@ everyone.now.distributeMessage = function(str){
     everyone.now.receiveMessage(this.now.name,str);
 }
 
+everyone.now.distributeNewPlaylistTrack = function(str){
+    console.log("distributing track to shared playlist");
+    everyone.now.receiveNewPlaylistTrack(this.now.name,str);
+}
+
 app.listen(port);
 
 console.log("app listening on port: "+port);

@@ -3,48 +3,10 @@ body div
 {
 	padding: 2px;
 }
-
-.functionalpart-box
-{
-	border: 1px solid #7a7a7a;
-	background-color: #f5f4eb;
-	padding: 8px;
-}
-.functionalpart-box form input
-{
-	width: 386px;
-	padding: 3px;
-	margin-bottom: 5px;
-}
-.artist-search-result
-{
-	
-}
-.clear
-{
-	clear:both;
-}
-.width400
-{
-	width: 400px;
-}
-.width250
-{
-	width: 250px;
-}
-.artistchart-image
-{
-	width: 70px;
-}
-.basket
-{
-	margin-left:19px;
-}
 .search-result
 {
-	margin-left:-2px;
-	background-color: #efefef;
-	border: solid 1px #cccccc;
+	background-color: #eeeeee;
+	border: solid 1px #bbbbbb;
 	height: 60px;
 	margin-bottom: 2px;
 	width: 308px;
@@ -61,9 +23,8 @@ body div
 }
 #shared-playlist
 {
-	width: 312px;
-	min-height: 500px;
-	border: solid 1px #cccccc;
+	width: 310px;
+	min-height: 50px;
 }
 #music-player
 {

@@ -1,6 +1,12 @@
 h2 7digital shared playlists built in node.js
 
-.first.column.width300
+
+
+hr
+
+p#welcome-message.small
+
+.first.column
 	h4 user chat
 	
 	form#chat-form
@@ -8,10 +14,10 @@ h2 7digital shared playlists built in node.js
 			input#text-input(type='text', style='width:200px;margin-right:5px;margin-top:5px')
 		span.column
 		input#send-button(type='submit', value='chat')
-	p#welcome-message.small
+
 	p#messages.small
 
-.column.width300
+.column
 	h4 search for a track 
 
 
@@ -21,20 +27,15 @@ h2 7digital shared playlists built in node.js
 		span.column
 		input#track-search-submit(type='submit', value='search')
 
-	p.small (then drag it onto the playlist)
-
 	div#searchResults
 
 
 
-.column.width300
+.column
 	h4 playlist
-
 	
-
 	div#shared-playlist
 		ul#sortable
 
 	div#music-player
-		audio#audio-stream(autobuffer='',preload='auto',controls='',src='',autoplay='autoplay',width='50px',tabindex='0')
-	
+		audio#audio-stream
