@@ -14,6 +14,14 @@ $(document).ready(function(){
       playNextTrack();
   }
 
+  now.receiveRemovalOfPlaylistTrack = function(name, trackid){
+    console.log("track ended, removing trackid " + trackid);
+    $("#sortable li.search-result[data-trackid="+ trackid +"]").remove();
+    playlistTrackIds.shift();
+    console.log("removed...", trackid);
+    playNextTrack();
+  }
+
 	$("#track-search").submit(function(e){
 		e.preventDefault();
 		queryParams = { query : $("#track-search-query").val() };
@@ -77,11 +85,8 @@ $(document).ready(function(){
       var a = audiojs.createAll({
         trackEnded: function() {
           trackCurrentlyPlaying = false;
-          console.log("track ended, removing trackid " + trackid);
-          $("#sortable li.search-result[data-trackid="+ trackid +"]").remove();
-          playlistTrackIds.shift();
-          console.log("removed...", trackid);
-          playNextTrack();
+          now.distributeRemovalOfFinishedTrack(trackid);
+          
         }
      }); 
       document.getElementById('audio-stream').play();

@@ -42,6 +42,10 @@ everyone.now.distributeNewPlaylistTrack = function(str){
     console.log("distributing track to shared playlist");
     everyone.now.receiveNewPlaylistTrack(this.now.name,str);
 }
+everyone.now.distributeRemovalOfFinishedTrack = function(str){
+    console.log("removing finished track from shared playlist");
+    everyone.now.receiveRemovalOfPlaylistTrack(this.now.name,str);
+}
 
 app.listen(port);
 
