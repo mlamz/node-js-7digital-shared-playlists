@@ -2,13 +2,9 @@ $(document).ready(function(){
 
 	now.name = prompt("Whats your name?", "");
 	$("#welcome-message").text("Welcome, " + now.name);
-
-	loadChatMessagesInPlay();
 	
 	now.receiveMessage = function(name, message){
 		var chatHtml = "<br />" + name + " : " + message;
-		addToChatMessageCollection(chatHtml);
-
 	    $("#messages").prepend(chatHtml);
 	}
 
@@ -17,9 +13,5 @@ $(document).ready(function(){
 		now.distributeMessage($("#text-input").val());
 		$("#text-input").val('');
 	});
-
-	function loadChatMessagesInPlay(){
-		
-	}
 });
 
