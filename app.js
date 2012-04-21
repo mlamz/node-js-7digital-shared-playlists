@@ -2,7 +2,7 @@ var express = require('express'),
     homeController = require('./controllers/homeController'),
     trackSearchController = require('./controllers/trackSearchController')
     nowjs = require('now'),
-    port = 3000;
+    port = process.env.PORT || 3000;
 
 var app = express.createServer();
 
