@@ -22,12 +22,16 @@ $(document).ready(function(){
 		
 		
 		now.receiveMessage = function(name, message){
-			var chatHtml = "<br />" + name + " : " + message;
-		    $("#messages").prepend(chatHtml);
+			if (message) {
+				var chatHtml = "<br />" + name + " : " + message;
+		    	$("#messages").prepend(chatHtml);
+			}
 		}
 		now.receiveUserLeftMessage = function(name){
-			$("#messages").prepend("<br />" + name + " has left.");
-			$("li.user-box[data-user="+name+"]").remove();
+			if (name) {
+				$("#messages").prepend("<br />" + name + " has left.");
+				$("li.user-box[data-user="+name+"]").remove();
+			}
 
 		}
 		now.receiveUserJoinedMessage = function(name){
