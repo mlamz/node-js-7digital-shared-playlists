@@ -23,8 +23,8 @@ var ChatMessage = mongoose.model('ChatMessage');
 
 function findAllUsers(callback) {
 	var myStartDate = new Date(new Date() - (SHOW_CONNECTED_USERS_FOR * MS_PER_MINUTE));
-  	User.find({ joined: {$gte: myStartDate, $lt: new Date()} }, function (err, users) {
-    callback(users);
+  	User.find({ joined: {$gte: myStartDate, $lt: new Date()}}, function (err, users) {
+    callback(users || []);
   });
 };
 
