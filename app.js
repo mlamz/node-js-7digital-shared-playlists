@@ -5,7 +5,8 @@ var express = require('express'),
     port = process.env.PORT || 3000,
     mongoose = require('mongoose'),
     User = homeController.User,
-    ChatMessage = homeController.ChatMessage;
+    ChatMessage = homeController.ChatMessage,
+    PlaylistTrack = homeController.PlaylistTrack;
 
 mongoose.connect('mongodb://'+process.env.MONGOLABS_USER+':'+process.env.MONGOLABS_PASSWORD+'@ds031947.mongolab.com:31947/shared-playlists');
 
@@ -25,9 +26,6 @@ app.configure('development', function(){
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
-
-
-
 app.get('/', function(request, response){
     homeController.index(request, response);
 });
@@ -39,17 +37,31 @@ app.post('/trackSearch', function(request, response){
 everyone.now.distributeMessage = function(str){
     console.log("distributing message");
     var chatMessage = new ChatMessage({ name: this.now.name, message: str, createdAt: new Date() });
-    chatMessage.save(function(err) { console.log(err)});
+    chatMessage.save(function(err) { console.log(err); });
     everyone.now.receiveMessage(this.now.name,str);
 }
 
-everyone.now.distributeNewPlaylistTrack = function(str){
+everyone.now.distributeNewPlaylistTrack = function(playlistTrackDto){
     console.log("distributing track to shared playlist");
-    everyone.now.receiveNewPlaylistTrack(this.now.name,str);
+    var playlistTrack = new PlaylistTrack({
+        trackId: playlistTrackDto.trackId,
+        trackName: playlistTrackDto.trackName,
+        artistName: playlistTrackDto.artistName,
+        addedBy : playlistTrackDto.addedBy,
+        image: playlistTrackDto.image 
+    });
+    playlistTrack.save(function(err){ console.log(err); });
+    everyone.now.receiveNewPlaylistTrack(this.now.name,playlistTrackDto);
 }
-everyone.now.distributeRemovalOfFinishedTrack = function(str){
+everyone.now.distributeRemovalOfFinishedTrack = function(trackId){
     console.log("removing finished track from shared playlist");
-    everyone.now.receiveRemovalOfPlaylistTrack(this.now.name,str);
+
+    var playlistTrack = PlaylistTrack.findOne({ trackId : trackId }, function (err, track) {
+        console.log("track removed from mongo: ", playlistTrack);
+        playlistTrack.remove();
+    });
+
+    everyone.now.receiveRemovalOfPlaylistTrack(this.now.name,trackId);
 }
 
 everyone.now.distributeNewUser = function(str){

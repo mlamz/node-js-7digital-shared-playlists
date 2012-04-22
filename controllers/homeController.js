@@ -8,6 +8,13 @@ var mongoose = require('mongoose'),
 		message: String,
 		createdAt: Date
 	}),
+  PlaylistTrack = new mongoose.Schema({
+    trackId: Number,
+    trackName: String,
+    artistName: String,
+    addedBy : String,
+    image: String 
+  }),
 	MS_PER_MINUTE = 60000,
 	SHOW_CONNECTED_USERS_FOR = 30,
   homeViewModel;
@@ -18,9 +25,20 @@ var User = mongoose.model('User');
 mongoose.model('ChatMessage', ChatMessage);
 var ChatMessage = mongoose.model('ChatMessage');
 
+mongoose.model('PlaylistTrack', PlaylistTrack);
+var PlaylistTrack = mongoose.model('PlaylistTrack');
+
 homeViewModel = function(){
   this.Users = [],
-  this.ChatMessages = []
+  this.ChatMessages = [],
+  this.PlaylistTracks = []
+}
+
+function findAllPlaylistTracks(homeViewModel, callback) {
+  PlaylistTrack.find({}, function (err, playlistTracks) {
+    homeViewModel.PlaylistTracks = playlistTracks || [];
+    callback(homeViewModel);
+  })
 }
 
 function findAllUsers(homeViewModel, callback) {
@@ -42,10 +60,11 @@ function findAllChatMessages(homeViewModel, callback) {
       },
       function (err, chatMessages) {
         console.log("error if exists", err);
-      console.log("chat messages", chatMessages);
-      homeViewModel.ChatMessages = chatMessages || []; 
-      callback(homeViewModel);
-  });
+        console.log("chat messages", chatMessages);
+        homeViewModel.ChatMessages = chatMessages || []; 
+        callback(homeViewModel);
+      }
+    );
 };
 
 module.exports = 
@@ -53,14 +72,18 @@ module.exports =
     index : function index(req, res){
     	findAllUsers(new homeViewModel(), function(homeViewModel){
         findAllChatMessages(homeViewModel, function(homeViewModel){
-          res.render("index", { 
+          findAllPlaylistTracks(homeViewModel, function(homeViewModel){
+            res.render("index", { 
             users : homeViewModel.Users,
-            chatMessages : homeViewModel.ChatMessages
-          });
+            chatMessages : homeViewModel.ChatMessages,
+            playlistTracks : homeViewModel.PlaylistTracks
+            });
+          })
         })
      	})
     },
     User : User,
-    ChatMessage: ChatMessage
+    ChatMessage: ChatMessage,
+    PlaylistTrack: PlaylistTrack
 }
 

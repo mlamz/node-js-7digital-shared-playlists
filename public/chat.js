@@ -20,7 +20,7 @@ $(document).ready(function(){
 		
 		now.receiveMessage = function(name, message){
 			if (message) {
-				var chatHtml = "<li class='small'><span class='chat-name'>" + name + " : </span>" + message + "</li>";
+				var chatHtml = "<li class='small'><span class='chat-name'>" + name + ": </span>" + message + "</li>";
 		    	$("#messages").prepend(chatHtml);
 			}
 		}

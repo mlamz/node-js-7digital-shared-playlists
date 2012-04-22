@@ -54,6 +54,20 @@ div#welcome-message
 
 	div#shared-playlist
 		ul#sortable
+			- for (var i = 0; i < playlistTracks.length; i++) {
+				li.search-result.ui-widget-content.playlist-spot-container(data-trackid=playlistTracks[i].trackId, data-image=playlistTracks[i].image, data-artistname=playlistTracks[i].artistName, data-trackname=playlistTracks[i].trackName)
+					div.column.first
+						img(src=playlistTracks[i].image)
+					div.column
+						span.small(style='font-size:10px')
+							=playlistTracks[i].artistName
+							span  - 
+							=playlistTracks[i].trackName
+						p
+							span Added by 
+							=playlistTracks[i].addedBy
+			- }
+
 
 	div#music-player
 		audio#audio-stream
