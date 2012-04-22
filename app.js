@@ -4,7 +4,8 @@ var express = require('express'),
     nowjs = require('now'),
     port = process.env.PORT || 3000,
     mongoose = require('mongoose'),
-    User = homeController.User;
+    User = homeController.User,
+    ChatMessage = homeController.ChatMessage;
 
 mongoose.connect('mongodb://'+process.env.MONGOLABS_USER+':'+process.env.MONGOLABS_PASSWORD+'@ds031947.mongolab.com:31947/shared-playlists');
 
@@ -37,6 +38,8 @@ app.post('/trackSearch', function(request, response){
 
 everyone.now.distributeMessage = function(str){
     console.log("distributing message");
+    var chatMessage = new ChatMessage({ name: this.now.name, message: str, createdAt: new Date() });
+    chatMessage.save(function(err) { console.log(err)});
     everyone.now.receiveMessage(this.now.name,str);
 }
 

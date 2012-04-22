@@ -26,7 +26,14 @@ div#welcome-message
 		span.column
 		input#send-button(type='submit', value='chat')
 
-	p#messages.small
+	ul#messages
+		- for (var i = chatMessages.length -1; i > 0; i--) {
+			li.small
+				span.chat-name
+					=chatMessages[i].name
+					span :
+				=chatMessages[i].message
+		- }
 
 .column
 	h4 search for a track 

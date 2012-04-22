@@ -17,25 +17,22 @@ $(document).ready(function(){
 		queryParams = { usersName : now.name };
 		console.log("saving user", now.name);
 		now.distributeNewUser(now.name);
-
-		
-		
 		
 		now.receiveMessage = function(name, message){
 			if (message) {
-				var chatHtml = "<br />" + name + " : " + message;
+				var chatHtml = "<li class='small'><span class='chat-name'>" + name + " : </span>" + message + "</li>";
 		    	$("#messages").prepend(chatHtml);
 			}
 		}
 		now.receiveUserLeftMessage = function(name){
 			if (name) {
-				$("#messages").prepend("<br />" + name + " has left.");
+				$("#messages").prepend("<li class='small'>" + name + " has left.</li>");
 				$("li.user-box[data-user="+name+"]").remove();
 			}
 
 		}
 		now.receiveUserJoinedMessage = function(name){
-			$("#messages").prepend("<br />" + name + " has joined.");
+			$("#messages").prepend("<li class='small'>" + name + " has joined.</li>");
 		}
 
 		$("#chat-form").submit(function(e){

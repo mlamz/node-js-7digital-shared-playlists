@@ -70,3 +70,13 @@ clear: both;
     font-size: 6.0em;
     font-color: White;
 }
+
+#messages
+{
+	width: 300px;
+}
+.chat-name
+{
+	font-weight: bold;
+	margin-right: 3px;
+}
