@@ -32,7 +32,16 @@ function findAllUsers(homeViewModel, callback) {
 };
 
 function findAllChatMessages(homeViewModel, callback) {
-    ChatMessage.find({}, function (err, chatMessages) {
+    ChatMessage.find(
+      {},
+      ['name','message'], 
+      {
+          skip: 0,
+          limit:10,
+          sort:{  createdAt: -1 }
+      },
+      function (err, chatMessages) {
+        console.log("error if exists", err);
       console.log("chat messages", chatMessages);
       homeViewModel.ChatMessages = chatMessages || []; 
       callback(homeViewModel);
