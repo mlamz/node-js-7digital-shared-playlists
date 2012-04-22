@@ -51,7 +51,6 @@ $(document).ready(function(){
 
       $("#searchResults li.search-result").hover(function(){ 
         $(this).addClass("search-result-hover");
-        console.log("hover");
       }, function(){ 
         $(this).removeClass("search-result-hover");
       });
