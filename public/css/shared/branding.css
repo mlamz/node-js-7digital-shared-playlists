@@ -77,9 +77,11 @@ a:link {
 -webkit-tap-highlight-color: #2780AF;} 
 
 hr {
-border-top: 2px solid #ebe4d1;
+border-top: 2px solid #666666;
 border-bottom: 1px solid #fff;
-background: none;}
+background: none;
+width: 1002px;
+}
 
 h1 {
 border-bottom: 1px dotted #dddcd5;}

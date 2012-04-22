@@ -2,18 +2,13 @@ $(document).ready(function(){
 	var playlistTrackIds = [], trackCurrentlyPlaying = false;
 
   now.ready(function(){
-
     syncPlaylistTracks();
     playNextTrack();
 
     now.receiveNewPlaylistTrack = function(name, track){
-        console.log("receiving track...");
-        console.log(track);
-        playlistTrackIds.push(track.trackId);
-
         var trackHtml = buildSearchResultHtml(track.image, track.artistName, track.trackName, false, false, track.trackId, track.addedBy);
-        console.log(trackHtml);
         $("#sortable").append(trackHtml);
+        playlistTrackIds.push(track.trackId);
         playNextTrack();
     }
 
@@ -25,12 +20,9 @@ $(document).ready(function(){
       playNextTrack();
     }
 
-
-
   	$("#track-search").submit(function(e){
   		e.preventDefault();
-  		var queryParams = { query : $("#track-search-query").val() };
-  		$.post("/trackSearch", queryParams,	function(data) {
+  		$.post("/trackSearch", { query : $("#track-search-query").val() }, function(data) {
    			data = JSON.parse(data);
    			$("#searchResults").text('');
    			$("#searchResults").append('<ul>');
@@ -40,7 +32,6 @@ $(document).ready(function(){
               isRepeatedTrack = $("#searchResults").text().indexOf(track.title) !== -1;
 
    				$("#searchResults").append(buildSearchResultHtml(track.release.image, track.artist.name, track.title, isLast, isRepeatedTrack, track.id));
-          
         })
         bindSearchResultTriggers();
    		})
@@ -51,19 +42,15 @@ $(document).ready(function(){
 
       $("#searchResults li.search-result").hover(function(){ 
         $(this).addClass("search-result-hover");
-      }, function(){ 
+      }, function() {
         $(this).removeClass("search-result-hover");
       });
 
       $("#searchResults li.search-result").click(function() {
         var searchResult = $(this);
         trackIdAdded = searchResult.attr("data-trackid");
-        
-
 
         if (trackIdAdded !== undefined && playlistTrackIds.indexOf(trackIdAdded) === -1){
-          console.log("track added", trackIdAdded);
-
           trackToPublish = {
             trackId: trackIdAdded,
             trackName: searchResult.attr("data-trackname"),
@@ -71,16 +58,11 @@ $(document).ready(function(){
             image: searchResult.attr("data-image"),
             addedBy: now.name
           }
-
           now.distributeNewPlaylistTrack(trackToPublish);
-        }
-        console.log("tracks in playlist", playlistTrackIds);
-        console.log("track to distribute", trackToPublish);
-
-        
-        
+        }        
       })
     }
+
     function playNextTrack(){
       if (playlistTrackIds.length > 0 && !trackCurrentlyPlaying){
             playTrack(playlistTrackIds[0]);
@@ -88,19 +70,17 @@ $(document).ready(function(){
     }
 
     function playTrack(trackid){
+      var stream = "http://previews.7digital.com/clips/34/"+trackid+".clip.mp3";
       if (!trackCurrentlyPlaying){
-        console.log("playing track id ", trackid);
         trackCurrentlyPlaying = true;
-        var stream = "http://previews.7digital.com/clips/34/"+trackid+".clip.mp3";
         $('#audio-stream').attr('src', stream);
-        var a = audiojs.createAll({
+        audiojs.createAll({
           trackEnded: function() {
             trackCurrentlyPlaying = false;
             now.distributeRemovalOfFinishedTrack(trackid);
-            
           }
        }); 
-        document.getElementById('audio-stream').play();
+      document.getElementById('audio-stream').play();
       }
     }
 
@@ -110,7 +90,10 @@ $(document).ready(function(){
       track = track.length > 25 ? track.substr(0, 25) + "..." : track;
       addedBy = (addedBy !== undefined) ? "Added by " + addedBy : "";
       if(!isRepeatedTrack){
-        html = "<li class='search-result playlist-spot-container' data-trackid='"+trackId+"' data-image='"+ image +"' data-artistname='"+ artist +"' data-trackname='"+ track +"'>"
+        html = "<li class='search-result playlist-spot-container' data-trackid='"+ trackId
+        +"' data-image='"+ image 
+        +"' data-artistname='"+ artist 
+        +"' data-trackname='"+ track +"'>"
         +"<div class='column first'><img src='" + image + "' /></div>"
         +"<div class='column'><span class='small' style='font-size:10px'>"
         + artist
@@ -120,18 +103,15 @@ $(document).ready(function(){
         + "<p>" + addedBy + "</p>"
         "</li>";
       }
-      
       if (isLast){
         html += "</ul>";
       }
-      
       return html;
     }
 
     function syncPlaylistTracks() {
       $("#sortable li.search-result").each(function(){
         var trackIdToSync = $(this).attr('data-trackid');
-        console.log("syncing track id to local list:", trackIdToSync);
         playlistTrackIds.push(trackIdToSync);
       });
     }

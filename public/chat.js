@@ -1,10 +1,7 @@
-var queryParams;
-
 $(document).ready(function(){
 	now.ready(function() {
 		now.receiveNewUser = function(user){
-			console.log("new user has joined");
-			$("#user-list").append("<li class='user-box small' data-user='"+user+"'>" + user + "</li>");
+			$("#user-list").append("<li class='user-box small' data-user='" + user + "'>" + user + "</li>");
 		}
 
 		now.name = prompt("Whats your name?", "");
@@ -14,8 +11,6 @@ $(document).ready(function(){
 		}
 		$("#welcome-message").text("Welcome, " + now.name);
 
-		queryParams = { usersName : now.name };
-		console.log("saving user", now.name);
 		now.distributeNewUser(now.name);
 		
 		now.receiveMessage = function(name, message){
@@ -41,7 +36,4 @@ $(document).ready(function(){
 			$("#text-input").val('');
 		})
 	})
-
 });
-
-

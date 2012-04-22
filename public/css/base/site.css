@@ -84,3 +84,7 @@ clear: both;
 	font-weight: bold;
 	margin-right: 3px;
 }
+#welcome-message
+{
+    font-family: 'Century Old Style Std', 'Century Schoolbook', Georgia, serif;
+}
