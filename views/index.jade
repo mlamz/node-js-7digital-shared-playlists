@@ -4,8 +4,7 @@ div#loading-message
 h2 7digital shared playlists built in node.js
 
 
-h5 Add tracks to a shared playlist, for everyone to enjoy!
-
+h5 Add tracks to a shared playlist for everyone to enjoy
 
 hr
 
@@ -55,7 +54,7 @@ div#welcome-message
 	div#shared-playlist
 		ul#sortable
 			- for (var i = 0; i < playlistTracks.length; i++) {
-				li.search-result.ui-widget-content.playlist-spot-container(data-trackid=playlistTracks[i].trackId, data-image=playlistTracks[i].image, data-artistname=playlistTracks[i].artistName, data-trackname=playlistTracks[i].trackName)
+				li.search-result.playlist-spot-container(data-trackid=playlistTracks[i].trackId, data-image=playlistTracks[i].image, data-artistname=playlistTracks[i].artistName, data-trackname=playlistTracks[i].trackName)
 					div.column.first
 						img(src=playlistTracks[i].image)
 					div.column

@@ -25,6 +25,8 @@ $(document).ready(function(){
       playNextTrack();
     }
 
+
+
   	$("#track-search").submit(function(e){
   		e.preventDefault();
   		var queryParams = { query : $("#track-search-query").val() };
@@ -46,6 +48,13 @@ $(document).ready(function(){
 
     function bindSearchResultTriggers(){
       var trackIdAdded, trackToPublish;
+
+      $("#searchResults li.search-result").hover(function(){ 
+        $(this).addClass("search-result-hover");
+        console.log("hover");
+      }, function(){ 
+        $(this).removeClass("search-result-hover");
+      });
 
       $("#searchResults li.search-result").click(function() {
         var searchResult = $(this);
@@ -102,7 +111,7 @@ $(document).ready(function(){
       track = track.length > 25 ? track.substr(0, 25) + "..." : track;
       addedBy = (addedBy !== undefined) ? "Added by " + addedBy : "";
       if(!isRepeatedTrack){
-        html = "<li class='search-result ui-widget-content playlist-spot-container' data-trackid='"+trackId+"' data-image='"+ image +"' data-artistname='"+ artist +"' data-trackname='"+ track +"'>"
+        html = "<li class='search-result playlist-spot-container' data-trackid='"+trackId+"' data-image='"+ image +"' data-artistname='"+ artist +"' data-trackname='"+ track +"'>"
         +"<div class='column first'><img src='" + image + "' /></div>"
         +"<div class='column'><span class='small' style='font-size:10px'>"
         + artist
