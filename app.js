@@ -1,12 +1,12 @@
 var express = require('express'),
     homeController = require('./controllers/homeController'),
-    trackSearchController = require('./controllers/trackSearchController')
+    trackSearchController = require('./controllers/trackSearchController'),
     nowjs = require('now'),
     port = process.env.PORT || 3000,
     mongoose = require('mongoose'),
-    User = homeController.User,
-    ChatMessage = homeController.ChatMessage,
-    PlaylistTrack = homeController.PlaylistTrack;
+    User = require('./models/user').UserEntity,
+    ChatMessage = require('./models/chatMessage').ChatMessageEntity,
+    PlaylistTrack = require('./models/playlistTrack').PlaylistTrackEntity;
 
 mongoose.connect('mongodb://'+process.env.MONGOLABS_USER+':'+process.env.MONGOLABS_PASSWORD+'@ds031947.mongolab.com:31947/shared-playlists');
 
